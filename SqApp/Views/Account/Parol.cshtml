@@ -1,0 +1,18 @@
+﻿@model SqApp.ViewModels.ParolModel
+<link rel="stylesheet" href="~/css/parol.css">
+
+<content>
+    <form class="vhod" asp-controller="Account" asp-action="Parol" method="post">
+        <h2>Смена пароля</h2>
+        <input asp-for="Email" placeholder="Ваше имя" required />
+        @*<input type="password" asp-for="OldPassword" placeholder="Старый пароль" required>*@
+        <input type="password" asp-for="NewPassword" placeholder="Придумайте пароль" required>
+        <input asp-for="NewPasswordConfirm" placeholder="Повторите пароль" required />
+        <button type="submit">Продолжить</button>
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <span asp-validation-for="NewPassword"></span>
+            <span asp-validation-for="NewPasswordConfirm"></span>
+        </div>
+    </form>
+</content>

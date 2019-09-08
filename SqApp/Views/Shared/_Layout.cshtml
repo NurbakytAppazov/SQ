@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SQ Express</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/const.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="mob-menu">
+            <ul>
+                <li><a href="user.html" class="mob-user"><i class="fa fa-map-marker-alt"></i>Вход 	/ Регистрация</a></li>
+                <li><a href="#!" class="mob-city"><i class="fa fa-user"></i>Алматы</a></li>
+            </ul>
+            <div class="mob-header">
+                <i class="fa fa-bars"></i>
+                <div class="left">
+                    <a href="~/Home/Index" class="logo">SQ Express</a>
+                </div>
+                <div class="right">
+                    <a href="user.html" class="user"><i class="fa fa-user"></i></a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="~/Store/Shop">Магазин</a></li>
+                <li><a href="~/Home/Logistika">Логистика</a></li>
+                <li><a href="#!">Отель</a></li>
+                <li><a href="#!">Гид</a></li>
+                <li><a href="#!">Переводы</a></li>
+                <li><a href="#!">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <header>
+                <div class="left">
+                    <a href="~/Home/Index" class="logo">SQ Express</a>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="~/Store/Shop">Магазин</a></li>
+                            <li><a href="~/Home/Logistika">Логистика</a></li>
+                            <li><a href="#!">Отель</a></li>
+                            <li><a href="#!">Гид</a></li>
+                            <li><a href="#!">Переводы</a></li>
+                            <li><a href="#!">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="right right-user">
+                        <div class="city">@User.Identity.Name</div>
+                        <a href="#!" class="user"><i class="fa fa-user"></i></a>
+                        <div class="user-menu">
+                            <i class="fa fa-caret-up"></i>
+                            <p><span>Мой мобильный</span><br>+7(708) 116-27-75</p>
+                            <a href=""><i class="fa fa-cog"></i>Сменить пароль</a>
+                            <a href=""><i class="fa fa-bars"></i>Мой товары</a>
+                            <a href="~/Account/Logout"><i class="fa fa-sign-out-alt"></i>Выход</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="right">
+                        <div class="city"><i class="fa fa-map-marker-alt"></i>Алматы</div>
+                        <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
+                    </div>
+                }
+
+            </header>
+            @RenderBody()
+            <footer>
+                <div class="foot-nav">
+                    <ul>
+                        <li><a href="#!">Магазин</a></li>
+                        <li><a href="#!">Логистика</a></li>
+                        <li><a href="#!">Отель</a></li>
+                        <li><a href="#!">Гид</a></li>
+                        <li><a href="#!">Переводы</a></li>
+                        <li><a href="#!">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="fmidle">
+                    <div class="social">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-vk"></i>
+                        <i class="fab fa-telegram"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <p>2017-2019 гг   ТОО «SQ Express»</p>
+                    <p>Корпоративный сайт</p>
+                    <p>Пользовательское соглашение</p>
+                </div>
+                <div class="fright">
+                    <div class="market">
+                        <a href="#!"><img src="~/images/PlayMarket.png" alt=""></a>
+                        <a href="#!"><img src="~/images/AppStore.png" alt=""></a>
+                    </div>
+                    <p>+7(777)333 44 55</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.right-user').hover(function () {
+                $('.user-menu').slideToggle(300);
+            });
+
+            $('.right-user > .user').on('click', function (e) {
+                e.preventDefault();
+            });
+            $('i.fa-bars').on('click', function (e) {
+                e.preventDefault();
+                $('.mob-menu').toggleClass('act-mob-menu');
+                $('.main').toggleClass('act-main');
+                $('body').toggleClass('act-body');
+            });
+        })
+    </script>
+</body>
+</html>
