@@ -21,6 +21,16 @@ namespace SqApp.Controllers
             return View();
         }
 
+        public IActionResult Uslugi()
+        {
+            return View();
+        }
+
+        public IActionResult Dostavka()
+        {
+            return View();
+        }
+
         [Authorize]
         public IActionResult About()
         {

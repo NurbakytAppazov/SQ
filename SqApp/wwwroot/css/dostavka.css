@@ -538,10 +538,6 @@ p.tar-dos{
 	*{
 		font-size: 14px;
 	}
-	.logo{
-		width: 150px;
-		margin-right: 10px;
-	}
 	.nav > ul > li a{
 		margin: 0 5px;
 	}
@@ -616,10 +612,6 @@ p.tar-dos{
 	}
 	.mob-header > i.fa-bars{
 		display: block;
-	}
-	.logo{
-		height: 40px;
-		margin: 7px 0;
 	}
 	.zayav{
 		display: none;

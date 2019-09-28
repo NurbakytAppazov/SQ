@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SqApp.DbData;
 using SqApp.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SqApp.Controllers
 {
@@ -18,7 +19,7 @@ namespace SqApp.Controllers
             this.db = _db;
         }
 
-
+        
         public async Task<IActionResult> Shop()
         {
             ShopViewModel svm = new ShopViewModel
@@ -28,7 +29,7 @@ namespace SqApp.Controllers
             };
             return View(svm);
         }
-
+        
         public async Task<IActionResult> Details(int? Id, int? page)
         {
             if(Id != null)
@@ -59,7 +60,7 @@ namespace SqApp.Controllers
             }
             return View();
         }
-
+        
         public async Task<IActionResult> ShopMenu(int? Id, int? page)
         {
             if(Id != null)

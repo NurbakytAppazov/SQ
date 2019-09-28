@@ -16,16 +16,17 @@
     <div class="wrap">
         <div class="mob-menu">
             <ul>
-                <li><a href="user.html" class="mob-user"><i class="fa fa-map-marker-alt"></i>Вход 	/ Регистрация</a></li>
-                <li><a href="#!" class="mob-city"><i class="fa fa-user"></i>Алматы</a></li>
+                <li><a href="~/Account/Login" class="mob-user"><i class="fa fa-user"></i>Вход / Регистрация</a></li>
+                <li><a href="#!" class="mob-city"><i class="fa fa-map-marker-alt"></i>Алматы</a></li>
             </ul>
             <div class="mob-header">
                 <i class="fa fa-bars"></i>
                 <div class="left">
-                    <a href="~/Home/Index" class="logo">SQ Express</a>
+                    @*<a href="~/Home/Index" class="logo">SQ Express</a>*@
+                    <a href="~/Home/Index" class="logo"><img src="~/images/logo.png" alt="Alternate Text" /></a>
                 </div>
                 <div class="right">
-                    <a href="user.html" class="user"><i class="fa fa-user"></i></a>
+                    <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
                 </div>
             </div>
             <ul>
@@ -40,7 +41,8 @@
         <div class="main">
             <header>
                 <div class="left">
-                    <a href="~/Home/Index" class="logo">SQ Express</a>
+                    @*<a href="~/Home/Index" class="logo">SQ Express</a>*@
+                    <a href="~/Home/Index" class="logo"><img src="~/images/logo.png" alt="Alternate Text" /></a>
                     <div class="nav">
                         <ul>
                             <li><a href="~/Store/Shop">Магазин</a></li>
@@ -53,7 +55,8 @@
                     </div>
                 </div>
 
-                @if (User.Identity.IsAuthenticated)
+                @*@if (User.Identity.IsAuthenticated)*@
+                @*@if (User.IsInRole)*@
                 {
                     <div class="right right-user">
                         <div class="city">@User.Identity.Name</div>
@@ -62,7 +65,7 @@
                             <i class="fa fa-caret-up"></i>
                             <p><span>Мой мобильный</span><br>+7(708) 116-27-75</p>
                             <a href=""><i class="fa fa-cog"></i>Сменить пароль</a>
-                            <a href=""><i class="fa fa-bars"></i>Мой товары</a>
+                            <a href=""><i class="fa fa-bars"></i>Мои товары</a>
                             <a href="~/Account/Logout"><i class="fa fa-sign-out-alt"></i>Выход</a>
                         </div>
                     </div>
@@ -95,7 +98,7 @@
                         <i class="fab fa-telegram"></i>
                         <i class="fab fa-instagram"></i>
                     </div>
-                    <p>2017-2019 гг   ТОО «SQ Express»</p>
+                    <p>2017-2019 гг <br />ТОО «SQ Express»</p>
                     <p>Корпоративный сайт</p>
                     <p>Пользовательское соглашение</p>
                 </div>

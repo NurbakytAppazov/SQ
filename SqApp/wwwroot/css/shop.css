@@ -258,10 +258,6 @@ a.tovar-name:focus, a.tov-img:focus {
         font-size: 14px;
     }
 
-    .logo {
-        width: 150px;
-        margin-right: 10px;
-    }
 
     .nav > ul > li a {
         margin: 0 5px;
@@ -315,10 +311,6 @@ a.tovar-name:focus, a.tov-img:focus {
         display: block;
     }
 
-    .logo {
-        height: 40px;
-        margin: 7px 0;
-    }
 
     .sect-search {
         width: 90%;

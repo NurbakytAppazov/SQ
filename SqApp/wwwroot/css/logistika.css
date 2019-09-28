@@ -387,10 +387,6 @@ a.submit{
 	*{
 		font-size: 14px;
 	}
-	.logo{
-		width: 150px;
-		margin-right: 10px;
-	}
 	.nav > ul > li a{
 		margin: 0 5px;
 	}
@@ -452,10 +448,6 @@ a.submit{
 	}
 	.mob-header > i.fa-bars{
 		display: block;
-	}
-	.logo{
-		height: 40px;
-		margin: 7px 0;
 	}
 	.sect1{
 		height: 570px;
