@@ -24,20 +24,20 @@
         </div>
         <div class="sect1-top">
             <a href="#!" class="stop-left">
-                @*<h1>Мой Банк</h1>
-                    <p>Всё о ваших картах, депозитах и кредитах</p>
-                    <div class="regist">Войти/Зарегистрироваться</div>*@
                 <img src="~/images/1sl.jpg" />
+                <img src="~/images/2sl.png" />
+                <img src="~/images/3sl.png" />
             </a>
             <div class="stop-right">
                 <a href="#!" class="strtop">
                     <img src="~/images/2sl.png" />
-                    @*<h3>Наручные <br> часы</h3>
-                        <p>В кредит от <span class="kredit">3123т/мес</span></p>
-                        <div class="buy">Купить сейчас</div>*@
+                    <img src="~/images/3sl.png" />
+                    <img src="~/images/1sl.jpg" />
                 </a>
                 <a href="#!" class="strbot">
                     <img src="~/images/3sl.png" />
+                    <img src="~/images/1sl.jpg" />
+                    <img src="~/images/2sl.png" />
                 </a>
             </div>
         </div>
@@ -96,19 +96,19 @@
         </div>
         <div class="sect2-bottom">
             <a href="#!">
-                <img src="~/images/avia-1.png" />
+                <img src="~/images/avia.png" />
                 <h3>Оптовый товары из Китая</h3>
             </a>
             <a href="#!">
-                <img src="~/images/transport-1.png" />
+                <img src="~/images/transport.png" />
                 <h3>Оптовый товары из Китая</h3>
             </a>
             <a href="#!">
-                <img src="~/images/mors-1.png" />
+                <img src="~/images/mors.png" />
                 <h3>Оптовый товары из Китая</h3>
             </a>
             <a href="#!">
-                <img src="~/images/ekonom-1.png" />
+                <img src="~/images/ekonom.png" />
                 <h3>Оптовый товары из Китая</h3>
             </a>
         </div>
@@ -153,7 +153,17 @@
 <script src="~/js/slider.min.js"></script>
 <script src="~/log-slick/slick.min.js"></script>
 <script type="text/javascript">
-     $(document).ready(function () {
+    $(document).ready(function () {
+         $('.stop-left, .strtop, .strbot').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 100,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            cssEase: 'linear'
+        });
          $(function () {
              $('.slider').rbtSlider({
                  'height': '100%',

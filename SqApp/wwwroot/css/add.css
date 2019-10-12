@@ -67,7 +67,7 @@ form > section{
 .sect-left input:focus,
 .sect-middle input:focus,
 .sect-right input:focus{
-  outline: 2px solid #FF8100;
+  outline: 2px solid #FF3D28;
   border-color: transparent;
 }
 

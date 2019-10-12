@@ -63,7 +63,7 @@ jQuery.fn.rbtSlider = function(opt){
                 if (index) {
                     nextItem = slider.find('.slItem').eq(index - 1);
                 } else {
-                    if (side == 'prev') {
+                    if (side === 'prev') {
                         if (slider.find('.slItem.active.active').prev().length) nextItem = slider.find('.slItem.active.active').prev();  
                         else nextItem = slider.find('.slItem').last();
                     } else {

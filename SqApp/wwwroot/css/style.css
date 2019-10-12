@@ -73,14 +73,17 @@
 	-ms-align-items: center;
 	align-items: center;
 }
-.stop-left > img {
-    width: 100%;
-    height: 100%;
+.stop-left img {
+    width: 100% !important;
+    height: 100% !important;
 }
-
-.stop-left > h1{
-	font-size: 80px;
-	color: #fff;
+.slick-list, .slick-track {
+    width: 100% !important;
+    height: 100% !important;
+}
+.stop-left > h1 {
+    font-size: 80px;
+    color: #fff;
 }
 .stop-left > p{
 	text-align: center;
@@ -100,7 +103,7 @@
 }
 .stop-left:hover > .regist{
 	background-color: #fff;
-	color: #118CE9;
+	color: #555;
 }
 
 .stop-right{
@@ -124,9 +127,9 @@
 	height: 50%;
 	background-color: #118CE9;
 }
-.strtop > img, .strbot > img {
-    width: 100%;
-    height: 100%;
+.strtop img, .strbot img {
+    width: 100% !important;
+    height: 100% !important;
 }
 .strtop{
 	display: -webkit-flex;
@@ -154,7 +157,7 @@
 	margin: 15px 0;
 }
 .strtop > p > .kredit{
-	background-color: #e9da11;
+	background-color: #FF3D28;
 	padding: 5px;
 }
 .buy{
@@ -181,12 +184,12 @@
 .sect1-bottom > a{
 	width: 15.5%;
 	/*padding: 0 25px;*/
-	padding: 30px 20px;
+	padding: 20px 15px;
 	margin: 10px 0;
 	background-color: #fff;
 	box-shadow: 0 1px 5px #90A8D1;
 	text-decoration: none;
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
@@ -198,19 +201,18 @@
 	flex-direction: column;
 	justify-content: space-around;
 	-ms-align-items: center;
-	align-items: center;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
+	align-items: center;*/
+    text-align: center;
 }
 .sect1-bottom > a > img{
-	height: 80px;
+	height: 50px;
 }
 .sect1-bottom > a > h3{
 	font-size: 24px;
 	font-weight: normal;
-	color: #118CE9;
-	margin: 15px 0;
+	color: #555;
+	margin: 0;
+	margin-top: 15px;
 }
 .sect1-bottom > a > *{
 	-webkit-transition: 0.5s;
@@ -219,12 +221,16 @@
 }
 .sect1-bottom p{
 	text-align: center;
+	margin-top: 15px;
 }
 .sect1-bottom > a:hover{
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
 	box-shadow: 0 1px 15px #90A8D1;
 }
 .sect1-bottom > a:hover > h3, .sect1-bottom > a:hover > p{
-	color: #e9da11;
+	color: #FF3D28;
 }
 
 
@@ -246,7 +252,7 @@
 }
 .sect2-top{
 	width: 100%;
-	height: 400px;
+	height: 350px;
 	background-color: #90A8D1;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -258,6 +264,7 @@
 
 .sect2-top img {
     width: 100%;
+    height: 100%;
 }
 
 .sect2-bottom{
@@ -296,12 +303,13 @@
 	margin-right: 0;
 }
 .sect2-bottom > a > img{
-	height: 100px;
+	height: 70px;
+    margin-bottom: 15px;
 }
 .sect2-bottom > a > h3{
 	font-size: 24px;
     font-weight: normal;
-	color: #118CE9;
+	color: #555;
 	margin: 15px 0;
 }
 .sect2-bottom > a > *{
@@ -316,7 +324,7 @@
 	box-shadow: 0 1px 15px #90A8D1;
 }
 .sect2-bottom > a:hover > i{
-	color: #e9da11;
+	color: #FF3D28;
 }
 
 .sect3{/*---------------SECT3-------------*/
@@ -383,7 +391,7 @@
 	transition: 0.5s;
 }
 .sect3-cont > a:hover > p{
-	color: #e9da11;
+	color: #FF3D28;
 }
 .sect4{/*---------------SECT4-------------*/
 	width: 100%;
@@ -414,9 +422,6 @@
 }
 
 @media  (max-width: 1024px){
-	.nav > ul > li a{
-		margin: 0 10px;
-	}
 	.sect2-top{
 		height: 300px;
 	}
@@ -499,7 +504,7 @@
 	}
 	.sect2-bottom > a > h3 {
 	    font-size: 18px;
-	    color: #118CE9;
+	    color: #555;
 	    margin: 15px 0;
 	}
 	.sect3-cont > a{

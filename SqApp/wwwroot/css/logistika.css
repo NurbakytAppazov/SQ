@@ -107,13 +107,13 @@
 	text-align: center;
 	font-size: 32px;
 	margin: 25px 0;
-	color: #118CE9;
+	color: #555;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
 }
 .sect2-cont > a:hover > h3, .sect2-cont > a:hover > i{
-	color: #FF8100;
+	color: #FF3D28;
 }
 .sect2-cont p{
     margin-bottom: 15px;

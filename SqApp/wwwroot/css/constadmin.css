@@ -86,7 +86,7 @@
   -ms-align-items: center;
   align-items: center;
   margin-right: 20px;
-  /*border: 1px solid #e9da11;*/
+  /*border: 1px solid #FF3D28;*/
   text-decoration: none;
   cursor: pointer;
   color: #fff;
@@ -98,8 +98,8 @@
 	height: 100%;
 }
 .logo:hover{
-    -webkit-filter: drop-shadow(0 0 3px #e9da11);
-    filter: drop-shadow(0 0 3px #e9da11);
+    -webkit-filter: drop-shadow(0 0 3px #FF3D28);
+    filter: drop-shadow(0 0 3px #FF3D28);
 }
 
 .nav{
@@ -226,7 +226,7 @@ a.mob-down:hover, a.mob-down:hover > i {
   	transition: 0.5s;
 }
 .city:hover, .user:hover, .city:hover > i, .user:hover > i{
-	color: #e9da11;
+	color: #FF3D28;
 }
 
 .right-user {

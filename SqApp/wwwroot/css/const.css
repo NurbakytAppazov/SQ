@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #118CE9;
+  color: #555555;
   font-family: Roboto, sans-serif;
   font-size: 16px;
 }
@@ -122,7 +122,7 @@ a.mob-down > i{
 	transition: 0.3s;
 }
 a.mob-down:hover, a.mob-down:hover > i{
-	color: #e9da11;
+	color: #FF3D28;
 }
 ul.mob-down-menu{
 	display: none;
@@ -195,7 +195,7 @@ ul.mob-dost-menu > li a{
   color: #fff;
   background-color: #118CE9;
   box-shadow: 0 1px 10px #118CE9;
-  padding: 0 7%;
+  padding: 0 13% !important;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -217,7 +217,7 @@ ul.mob-dost-menu > li a{
 }
 
 .logo{
-  width: 50px;
+  /*width: 50px;*/
   height: 50px;
   display: -webkit-flex;
   display: -moz-flex;
@@ -228,7 +228,7 @@ ul.mob-dost-menu > li a{
   -ms-align-items: center;
   align-items: center;
   margin-right: 20px;
-  /*border: 1px solid #e9da11;*/
+  /*border: 1px solid #FF3D28;*/
   text-decoration: none;
   cursor: pointer;
   color: #fff;
@@ -237,11 +237,11 @@ ul.mob-dost-menu > li a{
   	transition: 0.5s;
 }
 .logo > img{
-	height: 100%;
+	height: 80%;
 }
 .logo:hover{
-    -webkit-filter: drop-shadow(0 0 3px #e9da11);
-    filter: drop-shadow(0 0 3px #e9da11);
+    -webkit-filter: drop-shadow(0 0 3px #FF3D28);
+    filter: drop-shadow(0 0 3px #FF3D28);
 }
 
 .nav{
@@ -267,7 +267,8 @@ ul.mob-dost-menu > li a{
 .nav > ul > li a{
 	display: block;
 	line-height: 70px;
-	margin: 0 15px;
+	margin: 0;
+	margin-right: 15px;
   	color: #fff;
   	cursor: pointer;
   	text-decoration: none;
@@ -276,7 +277,7 @@ ul.mob-dost-menu > li a{
   	transition: 0.5s;
 }
 .nav > ul > li a:hover{
-	color: #e9da11;
+	color: #FF3D28;
 	text-decoration: underline;
 }
 ul.down-menu {
@@ -305,7 +306,7 @@ ul.down-menu > li:last-child a{
 	border-bottom: none;
 }
 a.mob-down:hover, a.mob-down:hover > i{
-	color: #e9da11;
+	color: #FF3D28;
 }
 
 .right{
@@ -333,7 +334,7 @@ a.mob-down:hover, a.mob-down:hover > i{
 	display: flex;
 	-ms-align-items: center;
 	align-items: center;
-	border-right: 1px solid #e9da11;
+	border-right: 1px solid #FF3D28;
   	cursor: pointer;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
@@ -366,7 +367,7 @@ a.mob-down:hover, a.mob-down:hover > i{
   	transition: 0.5s;
 }
 .city:hover, .user:hover, .city:hover > i, .user:hover > i{
-	color: #e9da11;
+	color: #FF3D28;
 }
 
 .right-user {
@@ -375,7 +376,7 @@ a.mob-down:hover, a.mob-down:hover > i{
 }
 .right-user:hover > .user, .right-user:hover > .city,
 .right-user:hover > .city > i, .right-user:hover > .user > i{
-	color: #e9da11;
+	color: #FF3D28;
 }
 .right-user:hover > .city{
     font-weight: 900;
@@ -408,7 +409,7 @@ a.mob-down:hover, a.mob-down:hover > i{
 	cursor: default !important;
 }
 .user-menu > p:hover, .user-menu > a:hover, .user-menu > a:hover > i{
-	color: #e9da11;
+	color: #FF3D28;
 }
 .user-menu > a:last-child{
 	border-bottom: none;
@@ -428,13 +429,16 @@ a.mob-down:hover, a.mob-down:hover > i{
 /*-------------------CONTENT-------------------------------------*/
 
 
-
+.main > header, .main > content, .main > footer {
+    padding-left: 13% !important;
+    padding-right: 13% !important;
+}
 
 /*-------------------FOOTER-------------------------------------*/
 
 .main > footer{
 	width: 100%;
-	padding: 20px 7% 40px 7%;
+	padding: 20px 13% 40px 13% !important;
 	border-top: 1px solid #E5E5E5;
 	background-color: #F7F7F7;
 	display: -webkit-flex;
@@ -484,14 +488,14 @@ a.mob-down:hover, a.mob-down:hover > i{
 }
 .foot-nav > ul > li a{
 	display: block;
-  	color: #118CE9;
+  	color: #555555;
   	cursor: pointer;
   	-webkit-transition: 0.2s;
   	-o-transition: 0.2s;
   	transition: 0.2s;
 }
 .foot-nav > ul > li a:hover{
-	color: #e9da11;
+	color: #FF3D28;
 }
 
 .fmidle >*{
@@ -511,7 +515,7 @@ a.mob-down:hover, a.mob-down:hover > i{
 .social > i{
 	font-size: 30px;
     margin: 5px;
-  	color: #118CE9;
+  	color: #555555;
 }
 
 
@@ -520,7 +524,7 @@ a.mob-down:hover, a.mob-down:hover > i{
 
 @media  (max-width: 1024px){
 	.nav > ul > li a{
-		margin: 0 10px;
+		margin-right: 10px;
 	}
 	ul.down-menu{
 		width: 200px;

@@ -106,7 +106,7 @@
 	border: 1px solid #90A8D1;
 }
 .section > input:focus{
-	outline: 2px solid #e9da11;
+	outline: 2px solid #FF3D28;
 }
 .section > h2{
 	font-size: 40px;
@@ -190,7 +190,7 @@
 }
 .open > i{
 	position: absolute;
-	color: #e9da11;
+	color: #FF3D28;
 }
 .close > i:last-child{
 	display: none;
@@ -204,7 +204,7 @@
 	transition: 0.5s;
 }
 .acc-head > a:hover{
-	color: #e9da11;
+	color: #FF3D28;
 }
 .acc-body {
 	padding: 10px 0;
@@ -215,13 +215,13 @@
 	text-decoration: none;
 	padding: 5px 0 5px 30px;
 	font-size: 14px;
-	color: #e9da11;
+	color: #FF3D28;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
 }
 .acc-body > a:hover{
-	color: #118CE9;
+	color: #555;
 }
 a.dost-active{
 	color: #90A8D1;
@@ -285,7 +285,7 @@ a.dost-active:hover{
 	border: 1px solid #90A8D1;
 }
 .form > input:focus, .form-more > input:focus{
-	outline: 2px solid #e9da11;
+	outline: 2px solid #FF3D28;
 }
 p.agreement{
 	margin: 15px 0;
@@ -377,7 +377,7 @@ p.tar-dos{
 	border: none;
 }
 .tarif > .stand{
-	border: 2px solid #e9da11;
+	border: 2px solid #FF3D28;
 }
 .fraht > div:last-child{
 	padding: 10px 15px;
@@ -456,7 +456,7 @@ p.tar-dos{
 	resize: none;
 }
 .form-more > textarea:focus{
-	outline: 2px solid #e9da11;
+	outline: 2px solid #FF3D28;
 }
 
 
