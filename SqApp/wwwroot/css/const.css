@@ -195,7 +195,7 @@ ul.mob-dost-menu > li a{
   color: #fff;
   background-color: #118CE9;
   box-shadow: 0 1px 10px #118CE9;
-  padding: 0 13% !important;
+  padding: 0 13%;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -430,15 +430,15 @@ a.mob-down:hover, a.mob-down:hover > i{
 
 
 .main > header, .main > content, .main > footer {
-    padding-left: 13% !important;
-    padding-right: 13% !important;
+    padding-left: 13%;
+    padding-right: 13%;
 }
 
 /*-------------------FOOTER-------------------------------------*/
 
 .main > footer{
 	width: 100%;
-	padding: 20px 13% 40px 13% !important;
+	padding: 20px 13% 40px 13%;
 	border-top: 1px solid #E5E5E5;
 	background-color: #F7F7F7;
 	display: -webkit-flex;
@@ -529,6 +529,10 @@ a.mob-down:hover, a.mob-down:hover > i{
 	ul.down-menu{
 		width: 200px;
 	}
+    .main > header, .main > content, .main > footer {
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+    }
 }
 @media  (max-width: 768px){
 	*{

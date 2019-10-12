@@ -1,7 +1,4 @@
 
-.main > header, .mob-menu > .mob-header, .main > content, .main > footer{
-	padding: 0 6%;
-}
 .slItem{
     width: 100%;
     height: 100%;
@@ -331,11 +328,16 @@
 	width: 100%;
 	margin-top: 80px;
 }
-.sect3-h{
-	font-size: 36px;
-	font-weight: normal;
-	text-align: center;
-	margin-bottom: 30px;
+.sect3-h {
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.sect3 > p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 35px;
 }
 .sect3-cont{
 	width: 100%;
@@ -378,14 +380,19 @@
 	-ms-align-items: center;
 	align-items: center;
 }
+.sect3-cont > a:nth-child(2), .sect3-cont > a:nth-child(5){
+	border-left: 1px solid #CBD6E8;
+	border-right: 1px solid #CBD6E8;
+}
 .sect3-cont > a:nth-child(n+1):nth-child(-n+3){
 	border-bottom: 1px solid #CBD6E8;
 }
 .sect3-cont > a > img{
-	width: 100%;
+	width: 60%;
 }
 .sect3-cont > a > p{
 	margin: 10px;
+    text-align: center;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
@@ -419,15 +426,24 @@
 	.sect2-top{
 		height: 450px;
 	}
+    .sect3-cont > a {
+        width: 33.33%;
+    }
 }
 
 @media  (max-width: 1024px){
+    .sect1-top {
+        height: 400px;
+    }
 	.sect2-top{
 		height: 300px;
 	}
 	.sect1-bottom > a{
 		padding: 20px 5px;
 	}
+    .sect1-bottom > a > h3{
+        font-size: 20px;
+    }
     .sect2-bottom > a > img {
         height: 60px;
     }
@@ -439,7 +455,7 @@
 		font-size: 14px;
 	}
 	.sect3-cont > a{
-		width: 33.2%;
+		width: 33.33%;
 	}
 }
 @media  (max-width: 768px){
@@ -510,6 +526,10 @@
 	.sect3-cont > a{
 		width: 50%;
 	}
+    .sect3-cont > a:nth-child(2), .sect3-cont > a:nth-child(5){
+		border-left: none;
+		border-right: none;
+    }
 	.sect3-cont > a:nth-child(n+1):nth-child(-n+4){
 		border-bottom: 1px solid #CBD6E8;
 	}
@@ -538,7 +558,7 @@
 	}
 	.sect1-bottom > a{
 	    width: 32%;
-	    padding: 20px;
+	    padding: 20px 0;
 	    margin: 0;
 	}
 	.sect1-bottom > a:nth-child(n+1):nth-child(-n+3){
@@ -548,7 +568,7 @@
 		height: 50px;
 	}
 	.sect1-bottom > a > h3 {
-	    font-size: 18px;
+	    font-size: 16px;
 	    margin: 0;
 	    margin-top: 10px;
 	}
@@ -593,11 +613,13 @@
 	}
 	.sect3-h{
 		font-size: 30px;
-		padding: 0 30px;
 	}
-	.sect3-cont > a{
-		padding: 15px;
-	}
+    .sect3 > p {
+        font-size: 16px;
+    }
+    .sect3-cont > a {
+        padding: 15px;
+    }
 	.fmidle{
 		margin-left: 5px;
 	}
@@ -637,9 +659,12 @@
 }
 @media  (max-width: 320px){
 	.sect1-bottom > a{
-		padding: 10px;
+		padding: 10px 0;
 	}
-	.sect1-bottom > a > h3, .sect2-h > p{
+	.sect1-bottom > a > h3{
+		font-size: 14px;
+	}
+    .sect2-h > p{
 		font-size: 16px;
 	}
     .sect2-top {

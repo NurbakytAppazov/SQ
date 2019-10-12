@@ -1,12 +1,9 @@
+@import url("const.css");
 
-.main > header, .mob-menu > .mob-header, .main > content {
-    padding: 0 6%;
-}
 /*-------------------CONTENT-------------------------------------*/
 
 .main > content {
     width: 100%;
-    padding: 0;
     padding-top: 50px;
 }
 
