@@ -1,0 +1,21 @@
+﻿@model IQueryable<SqApp.DbData.Pod_Category>
+
+
+<tr><td colspan="5">Список ПодКатегории @ViewBag.pctname</td></tr>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Имя Категории</th>
+    <th>Изменить</th>
+    <th>Удалить</th>
+</tr>
+@foreach (var x in Model)
+{
+    <tr>
+        <td>@x.Id</td>
+        <td>@x.Name</td>
+        <td>@ViewBag.pctname</td>
+        <td><a href="~/Admin/EditPodCategory/@x.Id">Изменить</a></td>
+        <td><a href="~/Admin/DeletePodCategory/@x.Id">Удалить</a></td>
+    </tr>
+}

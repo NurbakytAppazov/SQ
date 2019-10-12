@@ -17,7 +17,7 @@ namespace SqApp.Controllers
 
         public AccountController(SignInManager<User> _sM, AppDbContext _db, UserManager<User> _uM)
         {
-            this.db = _db;
+            db = _db;
             sM = _sM;
             uM = _uM;
         }

@@ -51,7 +51,7 @@
 }
 .zayav > button{
 	width: 85%;
-	background-color: #004B65;
+	background-color: #118CE9;
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
@@ -106,7 +106,7 @@
 	border: 1px solid #90A8D1;
 }
 .section > input:focus{
-	outline: 2px solid #FF8100;
+	outline: 2px solid #e9da11;
 }
 .section > h2{
 	font-size: 40px;
@@ -114,7 +114,7 @@
 }
 .section > .submit{
 	width: 75%;
-	background-color: #004B65;
+	background-color: #118CE9;
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
@@ -128,7 +128,7 @@
   height: 20px;
   position: absolute;
   z-index: 1005;
-  border: 2px solid #004B65;
+  border: 2px solid #118CE9;
   border-radius: 25%;
   top: 6px;
   right: 6px;
@@ -136,7 +136,7 @@
   background-color: #fff;
 }
 .close-mod:hover{
-  box-shadow: 0 0 10px #004B65;
+  box-shadow: 0 0 10px #118CE9;
 }
 .close-mod span{
   position: relative;
@@ -149,7 +149,7 @@
   height: 2px;
   display: block;
   content: '';
-  background-color: #004B65;
+  background-color: #118CE9;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -190,7 +190,7 @@
 }
 .open > i{
 	position: absolute;
-	color: #FF8100;
+	color: #e9da11;
 }
 .close > i:last-child{
 	display: none;
@@ -204,7 +204,7 @@
 	transition: 0.5s;
 }
 .acc-head > a:hover{
-	color: #FF8100;
+	color: #e9da11;
 }
 .acc-body {
 	padding: 10px 0;
@@ -215,13 +215,13 @@
 	text-decoration: none;
 	padding: 5px 0 5px 30px;
 	font-size: 14px;
-	color: #FF8100;
+	color: #e9da11;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
 }
 .acc-body > a:hover{
-	color: #004B65;
+	color: #118CE9;
 }
 a.dost-active{
 	color: #90A8D1;
@@ -285,7 +285,7 @@ a.dost-active:hover{
 	border: 1px solid #90A8D1;
 }
 .form > input:focus, .form-more > input:focus{
-	outline: 2px solid #FF8100;
+	outline: 2px solid #e9da11;
 }
 p.agreement{
 	margin: 15px 0;
@@ -293,7 +293,7 @@ p.agreement{
 }
 .form > .submit, .form-more > .submit{
 	width: 200px;
-	background-color: #004B65;
+	background-color: #118CE9;
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
@@ -350,7 +350,7 @@ p.tar-dos{
 	align-items: center;
 }
 .tarif > a.submit{
-	background-color: #004B65;
+	background-color: #118CE9;
 	color: #fff;
 	cursor: pointer;
 	text-decoration: none;
@@ -377,7 +377,7 @@ p.tar-dos{
 	border: none;
 }
 .tarif > .stand{
-	border: 2px solid #FF8100;
+	border: 2px solid #e9da11;
 }
 .fraht > div:last-child{
 	padding: 10px 15px;
@@ -392,7 +392,7 @@ p.tar-dos{
 	font-size: 22px;
 }
 .tarif-border{
-	border: 1px solid #004B65 !important;
+	border: 1px solid #118CE9 !important;
 }
 
 .goods{
@@ -433,7 +433,7 @@ p.tar-dos{
 }
 .form-more > .submit{
 	width: 200px;
-	background-color: #004B65;
+	background-color: #118CE9;
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
@@ -456,7 +456,7 @@ p.tar-dos{
 	resize: none;
 }
 .form-more > textarea:focus{
-	outline: 2px solid #FF8100;
+	outline: 2px solid #e9da11;
 }
 
 

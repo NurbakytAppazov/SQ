@@ -1,0 +1,21 @@
+﻿
+@model SqApp.ViewModels.ShopViewModel
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/admin.css">
+
+<content>
+    <div class="lists">
+        @foreach (var p in Model.Products)
+         {
+            <div class="tovar">
+                <img src="~/PublicImages/@p.PublicImage" alt="Img">
+                <h3>@p.Name <span>@p.Price тг</span></h3>
+                <a href="~/Admin/EditProduct/@p.Id">Подробнее</a>
+                <a href="~/Admin/DeleteProduct/@p.Id">Удалить</a>
+            </div>
+         }
+    </div>
+</content>

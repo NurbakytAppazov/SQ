@@ -1,4 +1,5 @@
 ﻿<link rel="stylesheet" href="~/css/dostavka.css">
+<link rel="stylesheet" href="~/css/slider.css">
 
 <content>
     <div class="accordeon">
@@ -207,86 +208,86 @@
     </div>
 </content>
 
-<script type="text/javascript" src="js/slider.min.js"></script>
+<script type="text/javascript" src="~/js/slider.min.js"></script>
 <script type="text/javascript">
 
-		$(function(){
-		    $('.slider').rbtSlider({
-		        'height':'100%',
-		        'dots': false,
-		        'arrows': false,
-		        'auto': 0
-		    });
-		});
-		$(document).ready(function() {
-			$('.zayav > button').on('click', function (e) {
-			    e.preventDefault();
-			    $('.modal-window').css('display', 'flex');;
-			});
-			$('.close-mod').on('click', function (e) {
-	           e.preventDefault();
-	           $('.modal-window').css('display', 'none');
-	        });
-			$('.ekspress, .stand, .fraht').on('click', function () {
-				$('.tarif > a.submit').css('visibility', 'visible');
-				if($('.ekspress, .fraht').hasClass('tarif-border')){
-					$('.ekspress, .fraht').removeClass('tarif-border');
-				}
-				$(this).not($('.stand')).addClass('tarif-border');
-				if ($('.ekspress').hasClass('tarif-border')) {
-					$('.tarif').css('justify-content', 'flex-start');
-				}
-				else if ($('.fraht').hasClass('tarif-border')) {
-					$('.tarif').css('justify-content', 'flex-end');
-				}
-				else if ($('.stand')) {
-					$('.tarif').css('justify-content', 'space-around');
-				}
-			});
+    $(function () {
+        $('.slider').rbtSlider({
+            'height': '100%',
+            'dots': false,
+            'arrows': false,
+            'auto': 3
+        });
+    });
+    $(document).ready(function () {
+        $('.zayav > button').on('click', function (e) {
+            e.preventDefault();
+            $('.modal-window').css('display', 'flex');;
+        });
+        $('.close-mod').on('click', function (e) {
+            e.preventDefault();
+            $('.modal-window').css('display', 'none');
+        });
+        $('.ekspress, .stand, .fraht').on('click', function () {
+            $('.tarif > a.submit').css('visibility', 'visible');
+            if ($('.ekspress, .fraht').hasClass('tarif-border')) {
+                $('.ekspress, .fraht').removeClass('tarif-border');
+            }
+            $(this).not($('.stand')).addClass('tarif-border');
+            if ($('.ekspress').hasClass('tarif-border')) {
+                $('.tarif').css('justify-content', 'flex-start');
+            }
+            else if ($('.fraht').hasClass('tarif-border')) {
+                $('.tarif').css('justify-content', 'flex-end');
+            }
+            else if ($('.stand')) {
+                $('.tarif').css('justify-content', 'space-around');
+            }
+        });
 
-		    $(window).resize(function(){
-			    if ($(window).width() < 426) {
-			    	$('.open').removeClass('close');
-			    }
-			    else {
-			    	$('.open').addClass('close');
-				}
-			});
-			$('.accordeon .acc-body').not($('.first-acc-body')).css('display', 'none');
-		    $('.accordeon .acc-head').on('click', function (e) {
-		    	if($('.open').hasClass('close')){
-		    		$('.open').not($(this).children('.open')).removeClass('close');
-		    	}
-		    	$(this).children('.open').toggleClass('close');
-		  		$('.accordeon .acc-body').not($(this).next()).slideUp(500);
-		  		$(this).next().slideToggle(500);
-		    });
-		    $('.tarif > a.submit').click(function() {
-				// var offset = 0;
-				$('html, body').animate({
-					scrollTop: $('.form-h').offset().top
-				}, 1000);
-				return false;
-			});
-		    $(window).on('load scroll',function(){
-		    	// alert($('footer').offset().top-500);
-			    if ($(this).scrollTop() > $('footer').offset().top-480) {
-			        $('.accordeon').addClass('acc-bottom');
-			        $(window).resize(function(){
-					    if ($(window).width() < 426) {
-					    	$('.accordeon').addClass('acc-bottom-mob');
-					    	$('.accordeon').removeClass('acc-bottom');
-					    }
-					    else{
-					    	$('.accordeon').removeClass('acc-bottom-mob');
-					    }
-					});
-			    }
-			    else{
-			    	$('.accordeon').removeClass('acc-bottom');
-			    }
-			});
-		});
+        $(window).resize(function () {
+            if ($(window).width() < 426) {
+                $('.open').removeClass('close');
+            }
+            else {
+                $('.open').addClass('close');
+            }
+        });
+        $('.accordeon .acc-body').not($('.first-acc-body')).css('display', 'none');
+        $('.accordeon .acc-head').on('click', function (e) {
+            if ($('.open').hasClass('close')) {
+                $('.open').not($(this).children('.open')).removeClass('close');
+            }
+            $(this).children('.open').toggleClass('close');
+            $('.accordeon .acc-body').not($(this).next()).slideUp(500);
+            $(this).next().slideToggle(500);
+        });
+        $('.tarif > a.submit').click(function () {
+            // var offset = 0;
+            $('html, body').animate({
+                scrollTop: $('.form-h').offset().top
+            }, 1000);
+            return false;
+        });
+        $(window).on('load scroll', function () {
+            // alert($('footer').offset().top-500);
+            if ($(this).scrollTop() > $('footer').offset().top - 480) {
+                $('.accordeon').addClass('acc-bottom');
+                $(window).resize(function () {
+                    if ($(window).width() < 426) {
+                        $('.accordeon').addClass('acc-bottom-mob');
+                        $('.accordeon').removeClass('acc-bottom');
+                    }
+                    else {
+                        $('.accordeon').removeClass('acc-bottom-mob');
+                    }
+                });
+            }
+            else {
+                $('.accordeon').removeClass('acc-bottom');
+            }
+        });
+    });
 </script>
 
 

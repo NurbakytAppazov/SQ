@@ -38,16 +38,16 @@ a.shop{
 	transition: 0.5s;
 }
 .search:hover{
-	border-color: #004B65;
+	border-color: #118CE9;
 }
 .search:focus, .sect-search > button:focus{
 	outline: none;
-	border-color: #004B65;
+	border-color: #118CE9;
 }
 .sect-search > button{
 	height: 100%;
 	padding: 10px;
-	background-color: #004B65;
+	background-color: #118CE9;
 	border: none;
 	position: absolute;
 	top: 0;

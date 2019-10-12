@@ -8,7 +8,7 @@
 
 <content>
     <form class="sect-search">
-        <a href="shop.html" class="shop">Магазин</a>
+        <a href="~/Store/Shop" class="shop">Магазин</a>
         <input type="text" class="search">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
@@ -68,22 +68,22 @@
             {
                 <div class="tovar">
                     <a href="~/Store/Details/@t.Id" class="tov-img">
-                        <img src="https://kaspi.kz/medias/sys_master/images/images/h72/hb6/9743794503710/casio-mtp-1374l-1avdf-black-21400996-1.png" alt="">
+                        <img src="~/PublicImages/@t.PublicImage" alt="">
                     </a>
                     <a href="~/Store/Details/@t.Id" class="tovar-name">@t.Name</a>
-                    <p class="price">Цена <span>29800тг</span></p>
+                    <p class="price">Цена <span>@t.Price тг</span></p>
                 </div>
             }
         </div>
     </div>
     <div class="tovars">
-        <h2>Вы недавно смотрели</h2>
+        <h2>Рекомендуемые</h2>
         <div class="responsive">
             @foreach (var t in Model.Products)
             {
                 <div class="tovar">
                     <a href="~/Store/Details/@t.Id" class="tov-img">
-                        <img src="https://kaspi.kz/medias/sys_master/images/images/h72/hb6/9743794503710/casio-mtp-1374l-1avdf-black-21400996-1.png" alt="">
+                        <img src="~/PublicImages/@t.PublicImage" alt="">
                     </a>
                     <a href="~/Store/Details/@t.Id" class="tovar-name">@t.Name</a>
                     <p class="price">Цена <span>@t.Price тг</span></p>

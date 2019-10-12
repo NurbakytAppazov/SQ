@@ -9,10 +9,13 @@
 	padding: 0;
 }
 .sect1{/*---------------SECT1-------------*/
-	height: 657px;
-	background-color: #90A8D1;
+	/*background-color: #90A8D1;*/
 	margin-bottom: 80px;
 }
+.sect1 > img{
+    width: 100%;
+}
+
 
 .sect2{/*---------------SECT2-------------*/
 	width: 100%;
@@ -22,7 +25,7 @@
 .sect2 > a.more{
 	display: block;
 	width: 200px;
-	background-color: #004B65;
+	background-color: #118CE9;
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
@@ -50,7 +53,6 @@
 	margin-bottom: 15px;
 }
 .sect2-h > p{
-	width: 600px;
 	font-size: 22px;
 	text-align: center;
 	margin: 0 auto;
@@ -73,7 +75,7 @@
 	width: 50%;
 	height: 300px;
 	padding: 0 10%;
-	background-color: #90A8D1;
+	background-color: #E6E4E3;
 	text-decoration: none;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -90,13 +92,12 @@
 	align-items: center;
 }
 .sect2-cont > a:first-child, .sect2-cont > a:last-child{
-	background-color: #B6C0D1;
+	background-color: #F2F1F0;
 }
 
-.sect2-cont > a > i{
-	color: #004B65;
-	font-size: 80px;
-	margin-bottom: 15px;
+.sect2-cont > a > img{
+    height: 100px;
+    margin: 15px 0;
 	z-index: 1000;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
@@ -104,9 +105,9 @@
 }
 .sect2-cont > a > h3{
 	text-align: center;
-	font-size: 24px;
+	font-size: 32px;
 	margin: 25px 0;
-	color: #004B65;
+	color: #118CE9;
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
@@ -115,9 +116,11 @@
 	color: #FF8100;
 }
 .sect2-cont p{
+    margin-bottom: 15px;
 	text-align: center;
+    font-size: 18px;
 }
-.sect2-cont > a:hover > i {
+.sect2-cont > a:hover > img {
   animation-duration: 2s;
   animation-name: slide;
 }
@@ -169,7 +172,6 @@
 	margin-bottom: 15px;
 }
 .sect3-h > p{
-	width: 600px;
 	font-size: 22px;
 	text-align: center;
 	margin: 0 auto;
@@ -232,10 +234,9 @@
 .sect3-cont:last-child{
 	border-bottom: 1px solid #B6C0D1;
 }
-.sect3-cont > i{
-	font-size: 120px;
+.sect3-cont > img{
+    width: 160px;
 	margin: 0 100px;
-	color: #AC5600;
 }
 .sect3-text{
 	width: 60%;
@@ -280,7 +281,6 @@
 	margin-bottom: 15px;
 }
 .sect4-h > p{
-	width: 600px;
 	font-size: 22px;
 	text-align: center;
 	margin: 0 auto;
@@ -288,18 +288,21 @@
 .sect4-cont{
 	width: 100%;
 	padding: 50px 300px;
-	background-color: #B6C0D1;
+    background-image: url(../images/form-bg.jpg);
+    background-size: cover;
 }
-.phones{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: space-between;
+.phones {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
 }
 .phones p, .form > p{
 	text-align: center;
+    color: #fff;
 }
 .number{
 	font-size: 32px;
@@ -319,23 +322,33 @@
 	-ms-align-items: center;
 	align-items: center;
 }
-.form > p{
-	margin: 25px;
-	font-size: 20px;
-}
+    .form > p {
+        margin: 25px;
+        font-size: 20px;
+        color: #fff;
+    }
 .form > input{
-	width: 300px;
+	width: 350px;
 	padding: 15px;
 	margin-bottom: 15px;
 	border-radius: 5px;
 	border: none;
 }
-p.agreement{
-	font-size: 12px;
+    .form > textarea {
+        width: 350px;
+        height:140px;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+    }
+p.agreement {
+    font-size: 12px;
+    color: #fff;
 }
 a.submit{
 	width: 200px;
-	background-color: #004B65;
+	background-color: #118CE9;
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
@@ -363,22 +376,34 @@ a.submit{
 	.nav > ul > li a{
 		margin: 0 10px;
 	}
-
+    .fade img {
+        height: 550px;
+    }
 	.sect2-h > h3, .sect3-h > h3, .sect4-h > h3{
 		font-size: 40px;
 	}
 	.sect2-h > p, .sect3-h > p, .sect4-h > p{
 		font-size: 18px;
 	}
-	.sect2-cont > a > h3{
-		margin: 20px 0;
-	}
-	.sect3-text{
-		/*width: 55%;*/
-	}
-	.sect3-cont > i{
-		margin: 0 70px;
-	}
+    .sect2-cont > a > img{
+        height: 80px;
+        margin: 0;
+    }
+    .sect2-cont > a > h3 {
+        font-size: 26px;
+        margin: 20px 0;
+    }
+    .sect2-cont p {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .sect3-text {
+        /*width: 55%;*/
+    }
+    .sect3-cont > img {
+        width: 130px;
+        margin: 0 70px;
+    }
 	.sect4-cont{
 		padding: 50px 200px;
 	}
@@ -397,24 +422,27 @@ a.submit{
 	.right i{
 		font-size: 20px;
 	}
-	.sect2-cont > a{
-		width: 100%;
-		height: 200px;
-	}
-	.sect2-cont > a:nth-child(3){
-		background-color: #B6C0D1;
-	}
-	.sect2-cont > a:nth-child(4){
-		background-color: #90A8D1;
-	}
-	.sect2-cont p{
-		display: none;
-	}
-	.sect3-cont{
-		padding: 30px 70px;
-	}
-	.sect3-cont > i{
-		font-size: 100px;
+    .fade img {
+        height: 350px;
+    }
+    .sect2-cont > a {
+        height: 250px;
+    }
+    .sect2-cont > a > img{
+        height: 70px;
+        margin: 0;
+    }
+    .sect2-cont > a > h3 {
+        font-size: 22px;
+    }
+    .sect2-cont p {
+        font-size: 14px;
+    }
+    .sect3-cont {
+        padding: 30px 70px;
+    }
+	.sect3-cont > img{
+		width: 100px;
 	}
 	.sect3-text > h4{
 		font-size: 25px;
@@ -449,41 +477,37 @@ a.submit{
 	.mob-header > i.fa-bars{
 		display: block;
 	}
-	.sect1{
+	/*.sect1{
 		height: 570px;
-	}
+	}*/
 	.sect1, .sect2, .sect3{
 		margin-bottom: 20px;
 	}
 	.sect2-cont > a{
-		height: 170px;
-		padding: 0 20%;
+		width: 100%;
+		height: 200px;
 	}
-	.sect2-cont > a > i{
-		font-size: 60px;
+	.sect2-cont > a:nth-child(3){
+		background-color: #F2F1F0;
+	}
+	.sect2-cont > a:nth-child(4){
+		background-color: #E6E4E3;
 	}
 	.sect2-cont > a > h3{
 		font-size: 20px;
-		margin: 10px 0;
+		margin: 20px 0;
 	}
-	.sect2-h{
-		margin-bottom: 0;
+	.sect2-cont p{
+		display: none;
 	}
-	.sect2-h, .sect3-h, .sect4-h{
-		padding: 20px;
-	}
-	.sect2-h > h3, .sect3-h > h3, .sect4-h > h3{
-		font-size: 30px;
-	}
-	.sect2-h > p, .sect3-h > p, .sect4-h > p{
-		width: 100%;
-		font-size: 16px;
-	}
-	.sect3-cont{
-		padding: 10px;
-	}
-	.sect3-cont > i{
-		font-size: 75px;
+    .sect2-h > h3, .sect3-h > h3, .sect4-h > h3 {
+        font-weight: normal;
+    }
+    .sect3-cont {
+        padding: 10px;
+    }
+	.sect3-cont > img{
+		width: 75px;
 		margin: 0 20px;
 	}
 	.sect3-text > h4{
@@ -501,6 +525,12 @@ a.submit{
 	.number{
 		font-size: 16px;
 	}
+    .form {
+        width: 100%;
+    }
+    .form > input, .form > textarea{
+        width: 90%;
+	}
 	.form > p{
 		font-size: 18px;
 		margin-bottom: 10px;
@@ -510,8 +540,19 @@ a.submit{
 	}
 }
 @media  (max-width: 375px){
-	.sect2-h > p, .sect3-h > p, .sect4-h > p{
-		font-size: 14px;
+    .sect2-h > p, .sect3-h > p, .sect4-h > p {
+        font-size: 14px;
+    }
+    .sect2-cont > a {
+        height: 150px;
+    }
+    .sect2-cont > a > img{
+        height: 50px;
+    }
+    
+	.sect2-cont > a > h3{
+		font-size: 16px;
+		margin: 15px 0;
 	}
 	.sect3-text > h4{
 		font-size: 18px;

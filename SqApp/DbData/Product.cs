@@ -19,9 +19,13 @@ namespace SqApp.DbData
 
         public string PublicImage { get; set; }
 
+        public string Info1 { get; set; }
+        public string Info2 { get; set; }
+        public string Info3 { get; set; }
+        public string Info4 { get; set; }
+        public string Info5 { get; set; }
 
-
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
 
         public int Pod_CategoryId { get; set; }
         public Pod_Category Pod_Category { get; set; }

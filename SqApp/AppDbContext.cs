@@ -26,5 +26,10 @@ namespace SqApp
 
         public DbSet<ProductInfo> ProductInfos { get; set; }
         public DbSet<InProductInfo> InProductInfos { get; set; }
+
+        /// <summary>
+        /// ///////////////////////////////////////////
+        /// </summary>
+        public DbSet<Request> Requests { get; set; }
     }
 }

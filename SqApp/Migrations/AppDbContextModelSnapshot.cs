@@ -225,9 +225,19 @@ namespace SqApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("CategoryId");
+                    b.Property<int?>("CategoryId");
 
                     b.Property<string>("FirstInfo");
+
+                    b.Property<string>("Info1");
+
+                    b.Property<string>("Info2");
+
+                    b.Property<string>("Info3");
+
+                    b.Property<string>("Info4");
+
+                    b.Property<string>("Info5");
 
                     b.Property<int?>("MinPay");
 
@@ -276,6 +286,24 @@ namespace SqApp.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductInfos");
+                });
+
+            modelBuilder.Entity("SqApp.DbData.Request", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("DateTime");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Requests");
                 });
 
             modelBuilder.Entity("SqApp.DbData.User", b =>

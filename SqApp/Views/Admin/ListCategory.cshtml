@@ -1,0 +1,29 @@
+﻿@model IQueryable<SqApp.DbData.Category>
+
+
+<tr><td colspan="5">Список Категории</td></tr>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Подкатегории</th>
+    <th>Изменить</th>
+    <th>Удалить</th>
+</tr>
+@foreach (var x in Model)
+{
+<tr>
+    <td>@x.Id</td>
+    <td>@x.Name</td>
+    <td><a href="#!" id="@x.Name" class="podcat">Подкатегории</a></td>
+    <td><a href="~/Admin/EditCategory/@x.Id">Изменить</a></td>
+    <td><a href="~/Admin/DeleteCategory/@x.Id">Удалить</a></td>
+</tr>
+}
+<script>
+    $('.podcat').click(function (e) {
+        e.preventDefault();
+        var name = $(this).attr("id");
+        name=encodeURIComponent(name);
+        $('#pctlist').load('@Url.Action("ListPodCategory", "Admin")?ctname=' + name);
+    });
+</script>

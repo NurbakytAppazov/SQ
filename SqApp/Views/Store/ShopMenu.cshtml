@@ -20,19 +20,18 @@
         <div class="sect-nas">
             <a href="~/Store/Shop">Magazin</a>
             <a href="~/Store/ShopMenu/@ViewBag.Id?page=1"><i class="fas fa-arrow-right"></i>@ViewBag.Name</a>
-            @*<a href="#!" class="nas-active"><i class="fas fa-arrow-right"></i>Chasy</a>*@
         </div>
         <div class="tovars">
             @foreach (var t in Model.Products)
             {
                 <div class="tovar">
                     <a href="~/Store/Details/@t.Id" class="tov-img">
-                        <img src="https://kaspi.kz/medias/sys_master/images/images/h72/hb6/9743794503710/casio-mtp-1374l-1avdf-black-21400996-1.png" alt="">
+                        <img src="~/PublicImages/@t.PublicImage" alt="">
                     </a>
-                    <a href="~/Store/Details/@t.Id" class="tovar-name">@*@t.Name*@ lsadasd asd asdas asdasdasd asdasd </a>
+                    <a href="~/Store/Details/@t.Id" class="tovar-name">@t.Name</a>
                     <div class="price">
                         <p>Цена<br /><span>@t.Price тг</span></p>
-                        <p>Мин.Заказ<br /><span>15</span></p>
+                        <p>Мин.Заказ<br /><span>@t.MinPay</span></p>
                     </div>
                 </div>
             }

@@ -1,0 +1,14 @@
+﻿@model SqApp.DbData.Category
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link rel="stylesheet" href="~/css/add.css">
+
+<form asp-controller="Admin" asp-action="AddCategory">
+    <h3>Добавить новый Category</h3>
+    <label>Name<input asp-for="Name" type="text" placeholder="text..."></label><br />
+    <input type="submit" value="Add Category">
+</form>
+
+<script type="text/javascript">
+</script>

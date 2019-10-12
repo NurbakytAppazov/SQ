@@ -1,0 +1,6 @@
+﻿@model IQueryable<SqApp.DbData.Pod_Category>
+
+    @foreach (var c in Model)
+    {
+        <option value="@c.Name">@c.Name</option>
+    }

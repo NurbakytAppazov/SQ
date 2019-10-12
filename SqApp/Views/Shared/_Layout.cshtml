@@ -16,8 +16,22 @@
     <div class="wrap">
         <div class="mob-menu">
             <ul>
-                <li><a href="~/Account/Login" class="mob-user"><i class="fa fa-user"></i>Вход / Регистрация</a></li>
+                <li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a href="#!" class="mob-user-aut">
+                            <img src="~/images/user.png" alt="">
+                            <span class="user-text"><span class="user-name">UserName</span><br>Настройки</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="~/Account/Login" class="mob-user"><i class="fa fa-user"></i>Вход / Регистрация</a>
+                    }
+                </li>
                 <li><a href="#!" class="mob-city"><i class="fa fa-map-marker-alt"></i>Алматы</a></li>
+                <li><a href="~/Home/Index" class="mob-logo"><img src="~/images/logo.png">SQ Express</a></li>
             </ul>
             <div class="mob-header">
                 <i class="fa fa-bars"></i>
@@ -30,11 +44,25 @@
                 </div>
             </div>
             <ul>
+                <li><a href="~/Home/Index">Главная</a></li>
                 <li><a href="~/Store/Shop">Магазин</a></li>
-                <li><a href="~/Home/Logistika">Логистика</a></li>
-                <li><a href="#!">Отель</a></li>
+                <li>
+                    <a href="#!" class="mob-down mob-dost">Доставка<i class="fa fa-angle-right"></i></a>
+                    <ul class="mob-down-menu mob-dost-menu">
+                        <li><a href="#!">Курьерская служба</a></li>
+                        <li><a href="~/Home/Logistika">Логистика</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!" class="mob-down mob-usl">Услуги<i class="fa fa-angle-right"></i></a>
+                    <ul class="mob-down-menu mob-usl-menu">
+                        <li><a href="#!">Пакеты с логотипом</a></li>
+                        <li><a href="#!">Переводы</a></li>
+                    </ul>
+                </li>
+                <li><a href="#!">SQ Taxi</a></li>
                 <li><a href="#!">Гид</a></li>
-                <li><a href="#!">Переводы</a></li>
+                <li><a href="#!">Сообщения</a></li>
                 <li><a href="#!">Контакты</a></li>
             </ul>
         </div>
@@ -46,17 +74,31 @@
                     <div class="nav">
                         <ul>
                             <li><a href="~/Store/Shop">Магазин</a></li>
-                            <li><a href="~/Home/Logistika">Логистика</a></li>
-                            <li><a href="#!">Отель</a></li>
+                            <li>
+                                <a href="#!" class="down dost">Доставка</a>
+                                <ul class="down-menu dost-menu">
+                                    <i class="fa fa-caret-up"></i>
+                                    <li><a href="#!">Курьерская служба</a></li>
+                                    <li><a href="~/Home/Logistika">Логистика</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#!" class="down usl">Услуги</a>
+                                <ul class="down-menu usl-menu">
+                                    <i class="fa fa-caret-up"></i>
+                                    <li><a href="#!">Пакеты с логотипом</a></li>
+                                    <li><a href="#!">Переводы</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#!">SQ Taxi</a></li>
                             <li><a href="#!">Гид</a></li>
-                            <li><a href="#!">Переводы</a></li>
+                            <li><a href="#!">Сообщения</a></li>
                             <li><a href="#!">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
 
-                @*@if (User.Identity.IsAuthenticated)*@
-                @*@if (User.IsInRole)*@
+                @if (User.Identity.IsAuthenticated)
                 {
                     <div class="right right-user">
                         <div class="city">@User.Identity.Name</div>
@@ -122,6 +164,27 @@
             $('.right-user > .user').on('click', function (e) {
                 e.preventDefault();
             });
+
+            $('a.dost').click(function(e) {
+                e.preventDefault();
+                $('ul.dost-menu').slideToggle(300);
+            });
+            $('a.usl').click(function(e) {
+                e.preventDefault();
+                $('ul.usl-menu').slideToggle(300);
+            });
+
+            $('a.mob-dost').click(function(e) {
+                e.preventDefault();
+                $('ul.mob-dost-menu').slideToggle(300);
+                $(this).children('i').toggleClass('act-mob-down-menu');
+            });
+            $('a.mob-usl').click(function(e) {
+                e.preventDefault();
+                $('ul.mob-usl-menu').slideToggle(300);
+                $(this).children('i').toggleClass('act-mob-down-menu');
+            });
+
             $('i.fa-bars').on('click', function (e) {
                 e.preventDefault();
                 $('.mob-menu').toggleClass('act-mob-menu');

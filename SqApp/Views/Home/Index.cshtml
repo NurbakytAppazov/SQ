@@ -1,5 +1,7 @@
 ﻿<link rel="stylesheet" href="~/css/style.css">
 <link rel="stylesheet" href="~/css/slider.css">
+<link rel="stylesheet" type="text/css" href="~/log-slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="~/log-slick/slick-theme.css" />
 <content>
     <div class="sect1">
         <div class="sect1-mob">
@@ -21,51 +23,53 @@
             </div>
         </div>
         <div class="sect1-top">
-            <a href="~/Account/Login" class="stop-left">
-                <h1>Мой Банк</h1>
-                <p>Всё о ваших картах, депозитах и кредитах</p>
-                <div class="regist">Войти/Зарегистрироваться</div>
+            <a href="#!" class="stop-left">
+                @*<h1>Мой Банк</h1>
+                    <p>Всё о ваших картах, депозитах и кредитах</p>
+                    <div class="regist">Войти/Зарегистрироваться</div>*@
+                <img src="~/images/1sl.jpg" />
             </a>
             <div class="stop-right">
                 <a href="#!" class="strtop">
-                    <h3>Наручные <br> часы</h3>
-                    <p>В кредит от <span class="kredit">3123т/мес</span></p>
-                    <div class="buy">Купить сейчас</div>
+                    <img src="~/images/2sl.png" />
+                    @*<h3>Наручные <br> часы</h3>
+                        <p>В кредит от <span class="kredit">3123т/мес</span></p>
+                        <div class="buy">Купить сейчас</div>*@
                 </a>
-                <div class="strbot">
-
-                </div>
+                <a href="#!" class="strbot">
+                    <img src="~/images/3sl.png" />
+                </a>
             </div>
         </div>
         <div class="sect1-bottom">
-            <a href="#!">
-                <i class="fa fa-shopping-cart"></i>
+            <a href="~/Store/Shop">
+                <img src="~/images/shop.png" />
                 <h3>Магазин</h3>
                 <p>Оптовый товары из Китая</p>
             </a>
             <a href="#!">
-                <i class="fa fa-shopping-cart"></i>
-                <h3>Магазин</h3>
+                <img src="~/images/dostavka.png" />
+                <h3>Доставка</h3>
                 <p>Оптовый товары из Китая</p>
             </a>
-            <a href="#!">
-                <i class="fa fa-shuttle-van"></i>
-                <h3>Логистика</h3>
+            <a href="~/Home/Logistika">
+                <img src="~/images/uslugi.png" />
+                <h3>Услуги</h3>
                 <p>Доставка товаров из Китая</p>
             </a>
             <a href="#!">
-                <i class="fa fa-hotel"></i>
-                <h3>Отель</h3>
+                <img src="~/images/taxi.png" />
+                <h3>SQ Taxi</h3>
                 <p>Список отели в вашем городе</p>
             </a>
             <a href="#!">
-                <i class="fab fa-vk"></i>
+                <img src="~/images/gid.png" />
                 <h3>SQ Гид</h3>
                 <p>Ответы на все вопросы</p>
             </a>
             <a href="#!">
-                <i class="fab fa-facebook"></i>
-                <h3>Переводы</h3>
+                <img src="~/images/message.png" />
+                <h3>Сообщения</h3>
                 <p>Перевод на Китаиский юань</p>
             </a>
         </div>
@@ -79,40 +83,33 @@
             <div class="slider" id="slider">
                 <div class="slItems">
                     <div class="slItem">
-                        <p>TEXT 1</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, doloribus.</p>
+                        <img src="~/images/d11.png" />
                     </div>
                     <div class="slItem">
-                        <p>TEXT 2</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, doloribus.</p>
+                        <img src="~/images/d22.png" />
                     </div>
                     <div class="slItem">
-                        <p>TEXT 3</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, doloribus.</p>
+                        <img src="~/images/d33.png" />
                     </div>
                 </div>
             </div>
         </div>
         <div class="sect2-bottom">
             <a href="#!">
-                <i class="fa fa-shopping-cart"></i>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Оптовый товары из Китая</p>
+                <img src="~/images/avia-1.png" />
+                <h3>Оптовый товары из Китая</h3>
             </a>
             <a href="#!">
-                <i class="fa fa-shopping-cart"></i>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Оптовый товары из Китая</p>
+                <img src="~/images/transport-1.png" />
+                <h3>Оптовый товары из Китая</h3>
             </a>
             <a href="#!">
-                <i class="fa fa-shopping-cart"></i>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Оптовый товары из Китая</p>
+                <img src="~/images/mors-1.png" />
+                <h3>Оптовый товары из Китая</h3>
             </a>
             <a href="#!">
-                <i class="fa fa-shopping-cart"></i>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Оптовый товары из Китая</p>
+                <img src="~/images/ekonom-1.png" />
+                <h3>Оптовый товары из Китая</h3>
             </a>
         </div>
     </div>
@@ -154,15 +151,16 @@
 
 
 <script src="~/js/slider.min.js"></script>
+<script src="~/log-slick/slick.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $(function () {
-            $('.slider').rbtSlider({
-                'height': '100%',
-                'dots': true,
-                'arrows': true,
-                'auto': 3
-            });
-        });
-    });
+     $(document).ready(function () {
+         $(function () {
+             $('.slider').rbtSlider({
+                 'height': '100%',
+                 'dots': false,
+                 'arrows': false,
+                 'auto': 3
+             })
+         });
+     });
 </script>

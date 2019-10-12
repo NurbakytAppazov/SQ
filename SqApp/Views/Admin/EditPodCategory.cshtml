@@ -1,0 +1,21 @@
+﻿@model SqApp.DbData.Pod_Category
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link rel="stylesheet" href="~/css/add.css">
+
+<form asp-controller="Admin" asp-action="EditPodCategory">
+    <h3>Изменить PodCategory</h3>
+    <input asp-for="Id" type="hidden" value="@ViewBag.Id"><br />
+    <label>
+        Имя Категории(@ViewBag.ctname) <br />
+        <select name="ctmodel">
+            @foreach (var c in ViewBag.Category)
+            {
+                <option value="@c.Name">@c.Name</option>
+            }
+        </select>
+    </label> <br />
+    <label>Name<input asp-for="Name" type="text" placeholder="text"></label><br />
+    <input type="submit" value="Изменить">
+</form>

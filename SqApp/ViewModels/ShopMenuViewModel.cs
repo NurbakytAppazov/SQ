@@ -24,7 +24,7 @@ namespace SqApp.ViewModels
 
     public class Pager
     {
-        public Pager(int totalItems, int? page, int pageSize = 2)
+        public Pager(int totalItems, int? page, int pageSize = 4)
         {
             // calculate total, start and end pages
             var totalPages = (int)Math.Ceiling((decimal)totalItems / (decimal)pageSize);

@@ -1,0 +1,12 @@
+﻿@model SqApp.DbData.Category
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link rel="stylesheet" href="~/css/add.css">
+
+<form asp-controller="Admin" asp-action="EditCategory">
+    <h3>Изменить Category</h3>
+    <input asp-for="Id" type="hidden" value="@ViewBag.Id"><br />
+    <label>Name<input asp-for="Name" type="text" placeholder="@ViewBag.Name"></label><br />
+    <input type="submit" value="Изменить">
+</form>

@@ -62,10 +62,10 @@
 	border: 1px solid #90A8D1;
 }
 .vhod > input:focus{
-	outline: 2px solid #FF8100;
+	outline: 2px solid #e9da11;
 }
 .vhod > button{
-	background-color: #004B65;
+	background-color: #118CE9;
 	color: #fff;
 	cursor: pointer;
 	padding: 15px;
@@ -73,7 +73,7 @@
 	border-color: transparent;
 }
 .vhod > button:focus{
-	border: 2px solid #FF8100;
+	border: 2px solid #e9da11;
 	border-radius: 0;
 	outline: none;
 }

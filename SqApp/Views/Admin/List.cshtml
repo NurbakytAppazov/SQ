@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/admin.css">
+
+<content>
+    <div><a href="~/Admin/ListProduct">Список Товаров</a></div>
+    <br />
+    <div><a href="#!" id="ListRequest" style="color: red;">Список Заявок</a></div>
+    <br />
+    <div><a href="#!" id="ListCategory">Список Категории</a></div>
+
+    <div class="lists">
+        <table id="reqlist"></table>
+    </div>
+    <br />
+    <div class="lists">
+        <table id="ctlist"></table>
+        <table id="pctlist"></table>
+    </div>
+
+</content>
+
+<script>
+    $(document).ready(function () {
+        $('#ListRequest').click(function (e) {
+            e.preventDefault();
+            var name = $('#ListRequest').attr("id");
+            name=encodeURIComponent(name);
+            $('#reqlist').load('@Url.Action("ListRequest", "Admin")?reqlist=' + name);
+        });
+
+        $('#ListCategory').click(function (e) {
+            e.preventDefault();
+            var name = $('#ListCategory').attr("id");
+            name=encodeURIComponent(name);
+            $('#ctlist').load('@Url.Action("ListCategory", "Admin")?ctlist=' + name);
+        });
+    })
+</script>

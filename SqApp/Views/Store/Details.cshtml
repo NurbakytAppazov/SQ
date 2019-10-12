@@ -8,7 +8,7 @@
 
 <content>
     <form class="sect-search">
-        <a href="shop.html" class="shop">Магазин</a>
+        <a href="~/Store/Shop" class="shop">Магазин</a>
         <input type="text" class="search" required>
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
@@ -16,20 +16,21 @@
         <ul>
             @foreach (var t in Model.Categories)
             {
-                <li><a href="~/Home/ShopMenu/@t.Id">@t.Name</a></li>
+                <li><a href="~/Store/ShopMenu/@t.Id">@t.Name</a></li>
             }
         </ul>
     </div>
     <div class="sect-nas">
         <a href="~/Store/Shop">Magazin</a>
         <a href="~/Store/ShopMenu/@ViewBag.Id"><i class="fas fa-arrow-right"></i>@ViewBag.Name</a>
-        @*<a href="#!"><i class="fas fa-arrow-right"></i>Chasy</a>*@
-        @*<a href="#!" class="nas-active"><i class="fas fa-arrow-right"></i>Chasy naruchnye</a>*@
     </div>
 
     <div class="sect-tovar">
         <div class="tov-vid">
             <div class="tov-slider">
+                <div class="mySlides">
+                    <img src="~/PublicImages/@Model.Products.PublicImage">
+                </div>
                 @foreach (var i in Model.ProductImages)
                 {
                     <div class="mySlides">
@@ -38,6 +39,9 @@
                 }
 
                 <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="~/PublicImages/@Model.Products.PublicImage" alt="The Woods">
+                    </div>
                     @foreach (var i in Model.ProductImages)
                     {
                         <div class="column">
@@ -56,11 +60,29 @@
                     <li>Возврат в течение 14 дней</li>
                 </ul>
                 <ul>
-                    <li>мужские наручные часы;</li>
-                    <li>водонепроницаемые;</li>
-                    <li>механизм: кварцевый;</li>
-                    <li>корпус из стали;</li>
-                    <li>размер: 43.5x47x10.4 мм.</li>
+                    <li>@Model.Products.FirstInfo;</li>
+                    @{
+                        if (Model.Products.Info1 != null)
+                        {
+                            <li>@Model.Products.Info1;</li>
+                        }
+                        if (Model.Products.Info2 != null)
+                        {
+                            <li>@Model.Products.Info2;</li>
+                        }
+                        if (Model.Products.Info3 != null)
+                        {
+                            <li>@Model.Products.Info3;</li>
+                        }
+                        if (Model.Products.Info4 != null)
+                        {
+                            <li>@Model.Products.Info4;</li>
+                        }
+                        if (Model.Products.Info5 != null)
+                        {
+                            <li>@Model.Products.Info5.</li>
+                        }
+                    }
                 </ul>
             </div>
         </div>
@@ -71,7 +93,7 @@
             </div>
             <div class="tab-body">
                 <div class="tab-b first">
-                    <h2>Отзывы о  CASIO MTP-1374L-1AVDF Black</h2>
+                    <h2>Отзывы о @Model.Products.Name</h2>
                     @foreach (var b in Model.Comments)
                     {
                         <div class="otz-cont">
@@ -101,7 +123,7 @@
 
                 </div>
                 <div class="tab-b">
-                    <h2>Характеристики CASIO MTP-1374L-1AVDF Black</h2>
+                    <h2>Характеристики @Model.Products.Name</h2>
                     @foreach (var t in Model.ProductInfos)
                     {
                         <dl>
@@ -129,7 +151,7 @@
             {
                 <div class="tovar">
                     <a href="~/Store/Details/@t.Id" class="tov-img">
-                        <img src="https://kaspi.kz/medias/sys_master/images/images/h72/hb6/9743794503710/casio-mtp-1374l-1avdf-black-21400996-1.png" alt="">
+                        <img src="~/PublicImages/@t.PublicImage" alt="">
                     </a>
                     <a href="~/Store/Details/@t.Id" class="tovar-name">@t.Name</a>
                     <p class="price">Цена <span>@t.Price тг</span></p>
@@ -138,13 +160,13 @@
         </div>
     </div>
     <div class="tovars">
-        <h2>Вы недавно смотрели</h2>
+        <h2>Рекомендуемые</h2>
         <div class="responsive">
             @foreach (var t in Model.Productes)
             {
                 <div class="tovar">
                     <a href="~/Store/Details/@t.Id" class="tov-img">
-                        <img src="https://kaspi.kz/medias/sys_master/images/images/h72/hb6/9743794503710/casio-mtp-1374l-1avdf-black-21400996-1.png" alt="">
+                        <img src="~/PublicImages/@t.PublicImage" alt="">
                     </a>
                     <a href="~/Store/Details/@t.Id" class="tovar-name">@t.Name</a>
                     <p class="price">Цена <span>@t.Price тг</span></p>
