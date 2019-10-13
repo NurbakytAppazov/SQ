@@ -429,9 +429,13 @@ a.mob-down:hover, a.mob-down:hover > i{
 /*-------------------CONTENT-------------------------------------*/
 
 
-.main > header, .main > content, .main > footer {
-    padding-left: 13%;
-    padding-right: 13%;
+.main > header, .main > footer {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+.main > content {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /*-------------------FOOTER-------------------------------------*/
@@ -529,10 +533,6 @@ a.mob-down:hover, a.mob-down:hover > i{
 	ul.down-menu{
 		width: 200px;
 	}
-    .main > header, .main > content, .main > footer {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
 }
 @media  (max-width: 768px){
 	*{
