@@ -12,5 +12,27 @@ namespace SqApp.Controllers
         {
             return View();
         }
+
+        public IActionResult Air()
+        {
+            return View();
+        }
+        public IActionResult Avto()
+        {
+            return View();
+        }
+
+        public IActionResult Cheap()
+        {
+            return View();
+        }
+        public IActionResult More()
+        {
+            return View();
+        }
+        public IActionResult Rail()
+        {
+            return View();
+        }
     }
 }
