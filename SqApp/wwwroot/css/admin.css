@@ -2,8 +2,7 @@
 
 .main > content { /*----------------------CONTENT-------------------*/
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 13%;
     justify-content: space-between;
     outline: 1px solid;
 }

@@ -121,7 +121,7 @@ namespace SqApp.Controllers
         public IActionResult AddProduct()
         {
             ViewBag.Category = db.Categories;
-            ViewBag.pc = db.Pod_Categories.First();
+            ViewBag.pc = db.Pod_Categories.Take(1);
 
             return View();
         }

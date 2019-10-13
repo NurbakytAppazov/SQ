@@ -238,12 +238,12 @@ ul.mob-dost-menu > li a{
 }
 .logo > img{
 	height: 80%;
+    margin-right: 5px;
 }
 .logo:hover{
     -webkit-filter: drop-shadow(0 0 3px #FF3D28);
     filter: drop-shadow(0 0 3px #FF3D28);
 }
-
 .nav{
   /*width: 170px;*/
   height: 100%;
