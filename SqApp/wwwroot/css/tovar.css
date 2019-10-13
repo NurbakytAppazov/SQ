@@ -171,7 +171,7 @@ i.fa-search {
 
 
 .sect-tovar { /*---------------SECT-TOVAR-------------*/
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -493,7 +493,7 @@ i.fa-search {
 }
 
 .tovars { /*---------------TOVARS-------------*/
-    width: 70%;
+    width: 85%;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -602,11 +602,11 @@ a.tovar-name:hover {
     }
 
     .tovars {
-        width: 80%;
+        width: 90%;
     }
 
     .sect-tovar {
-        width: 80%;
+        width: 90%;
     }
     .mySlides{
         height: 320px;
