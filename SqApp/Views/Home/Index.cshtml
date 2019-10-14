@@ -5,21 +5,10 @@
 <content>
     <div class="sect1">
         <div class="sect1-mob">
-            <div class="slider" id="slider">
-                <div class="slItems">
-                    <div class="slItem">
-                        <p>TEXT 1</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, doloribus.</p>
-                    </div>
-                    <div class="slItem">
-                        <p>TEXT 2</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, doloribus.</p>
-                    </div>
-                    <div class="slItem">
-                        <p>TEXT 3</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, doloribus.</p>
-                    </div>
-                </div>
+            <div class="autoplay">
+                <img src="~/images/d11.png" />
+                <img src="~/images/d22.png" />
+                <img src="~/images/d33.png" />
             </div>
         </div>
         <div class="sect1-top">
@@ -45,16 +34,26 @@
             <a href="~/Store/Shop">
                 <img src="~/images/shop.png" />
                 <h3>Магазин</h3>
-                <p>Оптовый товары из Китая</p>
+                <p>Оптовые товары из Китая</p>
             </a>
             <a href="#!">
                 <img src="~/images/dostavka.png" />
-                <h3>Доставка</h3>
-                <p>Оптовый товары из Китая</p>
+                <h3>Логистика</h3>
+                <p>Оптовые товары из Китая</p>
+            </a>
+            <a href="#!">
+                <img src="~/images/dostavka.png" />
+                <h3>Курьерская служба</h3>
+                <p>Оптовые товары из Китая</p>
             </a>
             <a href="~/Home/Logistika">
                 <img src="~/images/uslugi.png" />
-                <h3>Услуги</h3>
+                <h3>Пакеты с логотипом</h3>
+                <p>Доставка товаров из Китая</p>
+            </a>
+            <a href="~/Home/Logistika">
+                <img src="~/images/uslugi.png" />
+                <h3>Переводы</h3>
                 <p>Доставка товаров из Китая</p>
             </a>
             <a href="#!">
@@ -155,14 +154,22 @@
 <script src="~/log-slick/slick.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        
-         $(function () {
-             $('.slider').rbtSlider({
-                 'height': '100%',
-                 'dots': false,
-                 'arrows': false,
-                 'auto': 3
-             })
-         });
+        $('.autoplay').slick({
+            dots: false,
+            arrows: false,
+			  infinite: true,
+			  speed: 300,
+			  slidesToShow: 1,
+			  centerMode: true,
+			  variableWidth: true
+			});
+         //$(function () {
+         //    $('.slider').rbtSlider({
+         //        'height': '100%',
+         //        'dots': false,
+         //        'arrows': false,
+         //        'auto': 3
+         //    })
+         //});
      });
 </script>

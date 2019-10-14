@@ -133,18 +133,22 @@ i.fa-search {
 }
 
 .baner { /*---------------BANER-------------*/
-    width: 100%;
-    /*height: 350px;*/
-    background-color: #90A8D1;
-    position: absolute;
-    left: 0;
-    right: 0;
+    width: 100vw;
+    height: 100%;
+    height: 350px;
+    /*background-color: #90A8D1;*/
+    position: relative;
+    margin-left: 50%;
+    left: -50vw;
 }
-#ban-slider {
+.ban-slider {
     width: 100%;
     height: 100%;
 }
-#ban-slider img{
+.ban-slider > *, .ban-slider > * > *{
+    height: 100% !important;
+}
+.baner img {
     width: 100%;
     /*height: 100px !important;*/
 }
@@ -164,9 +168,6 @@ i.fa-search {
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-.nedavno {
-    margin-top: 38%;
 }
 .responsive {
     width: 100%;
@@ -240,6 +241,9 @@ a.tovar-name:focus, a.tov-img:focus {
 }
 
 @media (max-width: 1024px) {
+    .baner {
+        height: 260px;
+    }
     .nav > ul > li a {
         margin: 0 10px;
     }
@@ -256,9 +260,6 @@ a.tovar-name:focus, a.tov-img:focus {
     .tovars {
         width: 80%;
     }
-    .nedavno {
-        margin-top: 33%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -266,7 +267,9 @@ a.tovar-name:focus, a.tov-img:focus {
         font-size: 14px;
     }
 
-
+    .baner {
+        height: 200px;
+    }
     .nav > ul > li a {
         margin: 0 5px;
     }
@@ -310,7 +313,9 @@ a.tovar-name:focus, a.tov-img:focus {
     .main > header {
         display: none;
     }
-
+    .baner {
+        height: 110px;
+    }
     .mob-menu {
         display: block;
     }
@@ -349,7 +354,13 @@ a.tovar-name:focus, a.tov-img:focus {
 }
 
 @media (max-width: 375px) {
+    .baner {
+        height: 100px;
+    }
 }
 
 @media (max-width: 320px) {
+    .baner {
+        height: 90px;
+    }
 }

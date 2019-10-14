@@ -195,7 +195,6 @@ ul.mob-dost-menu > li a{
   color: #fff;
   background-color: #118CE9;
   box-shadow: 0 1px 10px #118CE9;
-  padding: 0 13%;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -204,6 +203,9 @@ ul.mob-dost-menu > li a{
   justify-content: space-between;
   -ms-align-items: center;
   align-items: center;
+}
+.mob-header {
+    padding: 0 6vw;
 }
 .left{
 	display: -webkit-flex;
@@ -235,6 +237,9 @@ ul.mob-dost-menu > li a{
   	-webkit-transition: 0.5s;
   	-o-transition: 0.5s;
   	transition: 0.5s;
+}
+.mob-header .logo{
+    width: auto !important;
 }
 .logo > img{
 	height: 80%;
@@ -571,6 +576,10 @@ a.mob-down:hover, a.mob-down:hover > i{
         width: 40px;
         height: 40px;
         margin: 7px 0;
+    }
+    .user {
+        width: auto;
+        height: 25px;
     }
 	.fmidle{
 		margin-left: 5px;

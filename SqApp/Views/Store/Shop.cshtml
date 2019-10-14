@@ -2,8 +2,8 @@
 
 <link rel="stylesheet" href="~/css/shop.css">
 <link rel="stylesheet" href="~/css/slider.css">
-<link rel="stylesheet" type="text/css" href="~/log-slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="~/log-slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="~/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="~/slick/slick-theme.css" />
 
 
 <content>
@@ -30,9 +30,13 @@
         </ul>
     </div>
     <div class="baner">
-        <div class="slider" id="ban-slider">
-            <img src="~/images/shop-banner.png" />
-        </div>
+        <div class="slider ban-slider">
+			<div class="slItems">
+                 <div class="slItem">
+                     <img src="~/images/shop-banner.png" />
+                 </div>
+			</div>
+		</div>
     </div>
 
 
@@ -75,44 +79,45 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-         $('#ban-slider').slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            speed: 100,
-            fade: true,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            cssEase: 'linear'
-        });
         $('.responsive').slick({
             dots: false,
             infinite: false,
             speed: 2500,
             slidesToShow: 5,
-            slidesToScroll: 5,
+            slidesToScroll: 4,
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 4,
-                        slidesToScroll: 4,
+                        slidesToScroll: 3,
                         infinite: false,
-                        dots: false
+                        dots: false,
+                        speed: 2000,
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 4,
-                        slidesToScroll: 4
+                        slidesToScroll: 3,
+                        speed: 1500,
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 2,
+                        speed: 1000,
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1,
+                        speed: 500,
                     }
                 }
             ]
@@ -120,9 +125,9 @@
         $(function () {
             $('.ban-slider').rbtSlider({
                 'height': '100%',
-                'dots': true,
-                'arrows': true,
-                'auto': 3
+                'dots': false,
+                'arrows': false,
+                'auto': 0
             });
         });
         $(function () {
