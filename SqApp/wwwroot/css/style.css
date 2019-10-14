@@ -47,9 +47,9 @@
     left: -6vw;
 }
 .autoplay img{
-    width: 80vw;
+    width: 90vw;
     height: 120px;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 .sect1-top{
 	width: 100%;
@@ -760,14 +760,12 @@
     }
     .autoplay img {
         height: 100px;
-        margin: 0 10px;
     }
 }
 @media  (max-width: 320px){
 
     .autoplay img {
         height: 90px;
-        margin: 0 8px;
     }
     .sect1-bottom > a {
         padding: 10px 5px;
