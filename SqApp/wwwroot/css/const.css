@@ -573,9 +573,13 @@ a.mob-down:hover, a.mob-down:hover > i{
 		display: block;
 	}
     .logo {
-        width: 40px;
         height: 40px;
         margin: 7px 0;
+        font-size: 20px;
+        /*margin-left: -50%;*/
+    }
+    .logo > img{
+        display: none;
     }
     .user {
         width: auto;
