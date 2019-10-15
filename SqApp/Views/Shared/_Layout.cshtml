@@ -19,20 +19,20 @@
                 <li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <a href="#!" class="mob-user-aut">
-                            <img src="~/images/user.png" alt="">
-                            <span class="user-text"><span class="user-name">@User.Identity.Name</span><br>Настройки</span>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                        <style>
-                            .mob-menu > ul:last-child{
-                                height: 67vh !important;
-                            }
-                        </style>
+                    <a href="#!" class="mob-user-aut">
+                        <img src="~/images/user.png" alt="">
+                        <span class="user-text"><span class="user-name">@User.Identity.Name</span><br>Настройки</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <style>
+                        .mob-menu > ul:last-child {
+                            height: 67vh !important;
+                        }
+                    </style>
                     }
                     else
                     {
-                        <a href="~/Account/Login" class="mob-user"><i class="fa fa-user"></i>Вход / Регистрация</a>
+                    <a href="~/Account/Login" class="mob-user"><i class="fa fa-user"></i>Вход / Регистрация</a>
                     }
                 </li>
                 <li><a href="#!" class="mob-city"><i class="fa fa-map-marker-alt"></i>Алматы<i class="fa fa-angle-right"></i></a></li>
@@ -42,7 +42,7 @@
                 <i class="fa fa-bars"></i>
                 <div class="left">
                     @*<a href="~/Home/Index" class="logo">SQ Express</a>*@
-                    <a href="~/Home/Index" class="logo"><img src="~/images/logo.png"/> Sqexpress.kz</a>
+                    <a href="~/Home/Index" class="logo"><img src="~/images/logo.png" /> Sqexpress.kz</a>
                 </div>
                 <div class="right">
                     <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
@@ -123,24 +123,24 @@
 
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <div class="right right-user">
-                        <div class="city">@User.Identity.Name</div>
-                        <a href="#!" class="user"><i class="fa fa-user"></i></a>
-                        <div class="user-menu">
-                            <i class="fa fa-caret-up"></i>
-                            <p><span>Мой мобильный</span><br>+7(708) 116-27-75</p>
-                            <a href=""><i class="fa fa-cog"></i>Сменить пароль</a>
-                            <a href=""><i class="fa fa-bars"></i>Мои товары</a>
-                            <a href="~/Account/Logout"><i class="fa fa-sign-out-alt"></i>Выход</a>
-                        </div>
+                <div class="right right-user">
+                    <div class="city">@User.Identity.Name</div>
+                    <a href="#!" class="user"><i class="fa fa-user"></i></a>
+                    <div class="user-menu">
+                        <i class="fa fa-caret-up"></i>
+                        <p><span>Мой мобильный</span><br>+7(708) 116-27-75</p>
+                        <a href=""><i class="fa fa-cog"></i>Сменить пароль</a>
+                        <a href=""><i class="fa fa-bars"></i>Мои товары</a>
+                        <a href="~/Account/Logout"><i class="fa fa-sign-out-alt"></i>Выход</a>
                     </div>
+                </div>
                 }
                 else
                 {
-                    <div class="right">
-                        <div class="city"><i class="fa fa-map-marker-alt"></i>Алматы</div>
-                        <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
-                    </div>
+                <div class="right">
+                    <div class="city"><i class="fa fa-map-marker-alt"></i>Алматы</div>
+                    <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
+                </div>
                 }
 
             </header>
@@ -177,7 +177,17 @@
             </footer>
         </div>
     </div>
-
+    @if(User.Identity.IsAuthenticated){
+    <script>
+        $('.mob-city').on('click', function (e) {
+            e.preventDefault();
+            $('.mob-menu').toggleClass('act-mob-menu');
+            $('.main').toggleClass('act-main');
+            $('body').toggleClass('act-body');
+            $('.region').toggleClass('act-region');
+        });
+    </script>
+    }
     <script type="text/javascript">
         $(document).ready(function () {
             $('.right-user').hover(function () {
@@ -188,21 +198,21 @@
                 e.preventDefault();
             });
 
-            $('a.dost').click(function(e) {
+            $('a.dost').click(function (e) {
                 e.preventDefault();
                 $('ul.dost-menu').slideToggle(300);
             });
-            $('a.usl').click(function(e) {
+            $('a.usl').click(function (e) {
                 e.preventDefault();
                 $('ul.usl-menu').slideToggle(300);
             });
 
-            $('a.mob-dost').click(function(e) {
+            $('a.mob-dost').click(function (e) {
                 e.preventDefault();
                 $('ul.mob-dost-menu').slideToggle(300);
                 $(this).children('i').toggleClass('act-mob-down-menu');
             });
-            $('a.mob-usl').click(function(e) {
+            $('a.mob-usl').click(function (e) {
                 e.preventDefault();
                 $('ul.mob-usl-menu').slideToggle(300);
                 $(this).children('i').toggleClass('act-mob-down-menu');
@@ -215,13 +225,6 @@
                 $('body').toggleClass('act-body');
             });
 
-            $('.mob-city').on('click', function (e) {
-                e.preventDefault();
-                $('.mob-menu').toggleClass('act-mob-menu');
-                $('.main').toggleClass('act-main');
-                $('body').toggleClass('act-body');
-                $('.region').toggleClass('act-region');
-            });
             $('.region > h3 > i').on('click', function (e) {
                 e.preventDefault();
                 $('.region').toggleClass('act-region');
