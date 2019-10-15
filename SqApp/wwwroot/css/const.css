@@ -75,9 +75,11 @@
 	overflow-y: hidden;
 }
 
-.mob-menu > ul:last-child{
-	padding: 10px 0;
-	padding-left: 25px;
+.mob-menu > ul:last-child {
+    height: 70vh;
+    padding: 10px 0;
+    padding-left: 25px;
+    overflow-y: scroll;
 }
 .mob-menu > ul > li a{
 	display: block;
@@ -86,6 +88,9 @@
 	color: #fff;
 	border-bottom: 1px solid #90A8D1;
 	padding: 10px 0;
+}
+.mob-menu > ul > li:last-child a {
+    border-bottom: none;
 }
 .mob-menu > ul:first-child{
 	background-color: #004056;
