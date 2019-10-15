@@ -695,7 +695,7 @@
 		padding: 0 20px;
 	}
     .sect2-top {
-        height: 125px;
+        height: 150px;
     }
 	.sect2-bottom{
 		-webkit-flex-wrap: wrap;
@@ -766,7 +766,7 @@
 }
 @media  (max-width: 375px){
     .sect2-top {
-        height: 110px;
+        height: 140px;
     }
     .autoplay img {
         height: 100px;
@@ -791,7 +791,7 @@
 		font-size: 16px;
 	}
     .sect2-top {
-        height: 95px;
+        height: 125px;
     }
 	.sect2-h > h3, .sect3-h{
 		font-size: 24px;

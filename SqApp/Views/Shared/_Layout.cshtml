@@ -21,16 +21,21 @@
                     {
                         <a href="#!" class="mob-user-aut">
                             <img src="~/images/user.png" alt="">
-                            <span class="user-text"><span class="user-name">UserName</span><br>Настройки</span>
+                            <span class="user-text"><span class="user-name">@User.Identity.Name</span><br>Настройки</span>
                             <i class="fa fa-angle-right"></i>
                         </a>
+                        <style>
+                            .mob-menu > ul:last-child{
+                                height: 67vh !important;
+                            }
+                        </style>
                     }
                     else
                     {
                         <a href="~/Account/Login" class="mob-user"><i class="fa fa-user"></i>Вход / Регистрация</a>
                     }
                 </li>
-                <li><a href="#!" class="mob-city"><i class="fa fa-map-marker-alt"></i>Алматы</a></li>
+                <li><a href="#!" class="mob-city"><i class="fa fa-map-marker-alt"></i>Алматы<i class="fa fa-angle-right"></i></a></li>
                 <li><a href="~/Home/Index" class="mob-logo"><img src="~/images/logo.png">SQ Express</a></li>
             </ul>
             <div class="mob-header">
@@ -42,6 +47,22 @@
                 <div class="right">
                     <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
                 </div>
+            </div>
+            <div class="region">
+                <h3><i class="fa fa-angle-left"></i>Выберите город</h3>
+                <p>A</p>
+                <ul>
+                    <li><a href="#!">Astana<i class="fa fa-check"></i></a></li>
+                    <li><a href="#!">Almaty<i class="fa fa-check"></i></a></li>
+                    <li><a href="#!">Arkalyk<i class="fa fa-check"></i></a></li>
+                </ul>
+                <p>B</p>
+                <ul>
+                    <li><a href="#!">Balkash<i class="fa fa-check"></i></a></li>
+                    <li><a href="#!">Bayanauyl<i class="fa fa-check"></i></a></li>
+                    <li><a href="#!">Nurbakyt<i class="fa fa-check"></i></a></li>
+                </ul>
+                <button>Продолжить</button>
             </div>
             <ul>
                 <li><a href="~/Home/Index">Сообщение</a></li>
@@ -193,6 +214,37 @@
                 $('.main').toggleClass('act-main');
                 $('body').toggleClass('act-body');
             });
+
+            $('.mob-city').on('click', function (e) {
+                e.preventDefault();
+                $('.mob-menu').toggleClass('act-mob-menu');
+                $('.main').toggleClass('act-main');
+                $('body').toggleClass('act-body');
+                $('.region').toggleClass('act-region');
+            });
+            $('.region > h3 > i').on('click', function (e) {
+                e.preventDefault();
+                $('.region').toggleClass('act-region');
+            });
+            //<i class="fa fa-check"></i>
+
+            $('.region > ul > li a').on('click', function (e) {
+                e.preventDefault();
+                if ($('.region > ul > li a').children('i.fa-check').hasClass('act-check')) {
+                    $('.region > ul > li a').children('i.fa-check').removeClass('act-check');
+                }
+                $(this).children('i.fa-check').addClass('act-check');
+            });
+
+            $('.region > button').on('click', function (e) {
+                e.preventDefault();
+                var s = $('.region > ul > li a').children('i.act-check').parent();
+
+                $('.mob-city').html('<i class="fa fa-map-marker-alt"></i>' + s.text() + '<i class="fa fa-angle-right"></i>');
+
+                $('.region').toggleClass('act-region');
+            });
+
         })
     </script>
 </body>

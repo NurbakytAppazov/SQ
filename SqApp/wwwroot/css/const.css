@@ -75,6 +75,85 @@
 	overflow-y: hidden;
 }
 
+/*-------------------------Select REGION-----------------------*/
+.region {
+    width: 101vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -201vw;
+    background-color: #ddd;
+    z-index: 10000;
+    overflow-y: scroll;
+    /*transform: translateX(201vw);*/
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.act-region {
+    /*transform: translateX(101vw);*/
+    right: -101vw;
+}
+.region > button{
+	width: 100vw;
+	text-align: center;
+	padding: 15px;
+	background-color: #118CE9;
+    color: #fff;
+	position: fixed;
+	/*right: -100vw;*/
+	bottom: 0;
+    z-index: 10000;
+}
+.region > h3{
+	width: 100%;
+	text-align: center;
+    font-size: 16px;
+	padding: 15px;
+	background-color: #fff;
+	position: relative;
+}
+.region > h3 > i{
+	width: 25px;
+	height: 25px;
+	font-size: 25px;
+	color: red;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -12.5px;
+}
+.region > p{
+    padding: 5px 15px;
+}
+.region > ul{
+    padding: 0 15px;
+    list-style: none;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+}
+.region > ul > li a{
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	color: #555;
+	border-bottom: 1px solid #ddd;
+	padding: 10px 0;
+}
+.region > ul > li a > i{
+    display: none;
+    color: #FF3D28;
+	font-size: 18px;
+    position: absolute;
+    right: 15px;
+}
+.act-check{
+    display: inline-block !important;
+}
+
+
+/*-------------------------Select REGION-----------------------*/
 .mob-menu > ul:last-child {
     height: 75vh;
     padding: 10px 0;
@@ -89,7 +168,7 @@
 	border-bottom: 1px solid #90A8D1;
 	padding: 10px 0;
 }
-.mob-menu > ul > li:last-child a {
+.mob-menu > ul > li:last-child a, .region > ul > li:last-child a {
     border-bottom: none;
 }
 .mob-menu > ul:first-child{
@@ -104,6 +183,10 @@
 	color: #fff;
 	margin-right: 10px;
 	font-size: 18px;
+}
+.mob-menu > ul:first-child a.mob-city > i.fa-angle-right{
+	font-size: 16px;
+	margin-left: 10px;
 }
 .mob-menu > ul:first-child a.mob-logo{
 	border: none;
@@ -186,6 +269,8 @@ ul.mob-dost-menu > li a{
     color: #fff;
     font-size: 16px;
 }
+
+
 
 /*-------------------HEADER-------------------------------------*/
 .main > header{
