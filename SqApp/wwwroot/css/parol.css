@@ -83,9 +83,7 @@
 }
 
 @media  (max-width: 1024px){
-	.nav > ul > li a{
-		margin: 0 10px;
-	}
+	
 	.vhod{
 		width: 50%;
 	}
@@ -93,9 +91,6 @@
 @media  (max-width: 768px){
 	*{
 		font-size: 14px;
-	}
-	.nav > ul > li a{
-		margin: 0 5px;
 	}
 	.right > .city{
 		margin-right: 10px;

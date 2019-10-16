@@ -635,11 +635,12 @@ a.mob-down:hover, a.mob-down:hover > i{
 	}
 	.logo{
 		width: 50px;
-		margin-right: 10px;
+		margin-right: 0;
 	}
-	.nav > ul > li a{
-		margin: 0 5px;
-	}
+    .nav > ul > li a {
+        margin: 0;
+        margin-right: 10px;
+    }
 	.right > .city{
 		margin-right: 10px;
 		padding-right: 10px;
@@ -650,6 +651,15 @@ a.mob-down:hover, a.mob-down:hover > i{
     .market {
         display: flex;
         flex-direction: column;
+    }
+}
+@media (max-width: 640px) {
+    .main > header * {
+        font-size: 12px;
+    }
+    .nav > ul > li a {
+        margin: 0;
+        margin-right: 5px;
     }
 }
 @media  (max-width: 425px){
@@ -666,7 +676,7 @@ a.mob-down:hover, a.mob-down:hover > i{
         height: 40px;
         margin: 7px 0;
         font-size: 20px;
-        /*margin-left: -50%;*/
+        margin-left: -85%;
     }
     .logo > img{
         display: none;
@@ -708,8 +718,14 @@ a.mob-down:hover, a.mob-down:hover > i{
 	}
 }
 @media  (max-width: 375px){
+    .logo {
+        margin-left: -70%;
+    }
 }
 @media  (max-width: 320px){
+    .logo {
+        margin-left: -50%;
+    }
     .foot-nav{
         display: none;
     }

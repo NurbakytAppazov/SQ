@@ -297,9 +297,6 @@ a.tovar-name:hover{
 }
 
 @media  (max-width: 1024px){
-	.nav > ul > li a{
-		margin: 0 10px;
-	}
 	.sect-search{
 		width: 70%;
 	}
@@ -317,9 +314,6 @@ a.tovar-name:hover{
 @media  (max-width: 768px){
 	*{
 		font-size: 14px;
-	}
-	.nav > ul > li a{
-		margin: 0 5px;
 	}
 	.right > .city{
 		margin-right: 10px;
