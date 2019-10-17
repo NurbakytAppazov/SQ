@@ -22,6 +22,10 @@ namespace SqApp.Controllers
             return View();
         }
         
+        public IActionResult Kurer()
+        {
+            return View();
+        }
         public IActionResult Logistika()
         {
             return View();

@@ -719,7 +719,7 @@ a.mob-down:hover, a.mob-down:hover > i{
 }
 @media  (max-width: 375px){
     .logo {
-        margin-left: -70%;
+        margin-left: -60%;
     }
 }
 @media  (max-width: 320px){

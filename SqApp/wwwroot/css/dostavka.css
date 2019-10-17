@@ -289,9 +289,13 @@ a.dost-active:hover{
 .form > input:focus, .form-more > input:focus{
 	outline: 2px solid #FF3D28;
 }
-p.agreement{
-	margin: 15px 0;
-	font-size: 11px;
+p.agreement {
+    margin: 15px 0;
+    font-size: 11px;
+    text-align: center;
+}
+.section > p.agreement {
+    text-align: center;
 }
 .form > .submit, .form-more > .submit{
 	width: 200px;
