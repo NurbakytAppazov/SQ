@@ -64,6 +64,8 @@ content > .lists {
 .lists > table{
     border: 1px solid;
     border-collapse: collapse;
+    position: relative;
+    opacity: 0;
 }
 .lists > table > tr:first-child > td{
   background-color: #118CE9;
@@ -81,6 +83,25 @@ content > .lists {
 }
 
 
+.preloader {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    background-image: url(../slick/ajax-loader.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-color: #FF3D28;*/
+}
 
-
-
+.main-preloader {
+    top: 0;
+    left: 250px;
+}
+.pct-preloader {
+    display: none;
+    position: unset;
+    top: 0;
+    right: 0;
+    border: none;
+}

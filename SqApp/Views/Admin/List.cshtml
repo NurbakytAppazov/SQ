@@ -13,12 +13,17 @@
     <div><a href="#!" id="ListCategory">Список Категории</a></div>
 
     <div class="lists">
-        <table id="reqlist"></table>
+        <table id="reqlist">
+            <tr class="preloader main-preloader"></tr>
+        </table>
     </div>
     <br />
     <div class="lists">
-        <table id="ctlist"></table>
-        <table id="pctlist"></table>
+        <table id="ctlist">
+            <tr class="preloader main-preloader"></tr>
+        </table>
+        <table id="pctlist">
+        </table>
     </div>
 
 </content>
@@ -27,6 +32,7 @@
     $(document).ready(function () {
         $('#ListRequest').click(function (e) {
             e.preventDefault();
+            $('#reqlist').css('opacity', '1');
             var name = $('#ListRequest').attr("id");
             name=encodeURIComponent(name);
             $('#reqlist').load('@Url.Action("ListRequest", "Admin")?reqlist=' + name);
@@ -34,6 +40,7 @@
 
         $('#ListCategory').click(function (e) {
             e.preventDefault();
+            $('#ctlist').css('opacity', '1');
             var name = $('#ListCategory').attr("id");
             name=encodeURIComponent(name);
             $('#ctlist').load('@Url.Action("ListCategory", "Admin")?ctlist=' + name);

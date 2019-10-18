@@ -583,10 +583,10 @@
     .sect1-bottom > a:nth-child(n+1):nth-child(-n+4){
 		border-right: none;
 	}
-    .sect1-bottom > a:nth-last-child(n+2):nth-last-child(-n+4){
+    .sect1-bottom > a:nth-last-child(n+2):nth-last-child(-n+5){
 		border-right: none;
 	}
-    .sect1-bottom > a:nth-child(-n+6){
+    .sect1-bottom > a:nth-child(n+1):nth-child(-n+5){
         margin-bottom: -10px;
         border-bottom: none;
     }
@@ -669,9 +669,10 @@
 	    padding: 15px 5px;
 	    margin: 0;
 	}
-        .sect1-bottom > a:nth-child(-n+6) {
-            margin-bottom: -5px;
-        }
+        
+    .sect1-bottom > a:nth-child(n+1):nth-child(-n+5){
+        margin-bottom: -5px;
+    }
     .sect1-bottom > a > img{
         height: 30px;
     }
