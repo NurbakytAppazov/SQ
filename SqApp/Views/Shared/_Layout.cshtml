@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SQ Express</title>
+    <link rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/const.css">
@@ -19,20 +20,29 @@
                 <li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                    <a href="#!" class="mob-user-aut">
-                        <img src="~/images/user.png" alt="">
-                        <span class="user-text"><span class="user-name">@User.Identity.Name</span><br>Настройки</span>
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                    <style>
-                        .mob-menu > ul:last-child {
-                            height: 67vh !important;
-                        }
-                    </style>
+                        @*<a href="#!" class="mob-user-aut">
+                       <img src="~/images/user.png" alt="">
+                       <span class="user-text"><span class="user-name">@User.Identity.Name</span><br>Настройки</span>
+                       <i class="fa fa-angle-right"></i>
+                    </a>*@
+                        <a href="~/Account/Login" class="mob-user-aut mob-down">
+                            <img src="~/images/user.png" alt="">
+                            <span class="user-text"><span class="user-name">@User.Identity.Name</span><br>Настройки</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <ul class="mob-down-menu mob-user-aut-menu">
+                            <li><a href="#!" class="mob-cart-show"><i class="fa fa-bars"></i>Моя корзина</a></li>
+                            <li><a href="~/Account/Logout"><i class="fa fa-sign-out-alt"></i>Выход</a></li>
+                        </ul>
+                        <style>
+                            .mob-menu > ul:last-child {
+                                height: 67vh !important;
+                            }
+                        </style>
                     }
                     else
                     {
-                    <a href="~/Account/Login" class="mob-user"><i class="fa fa-user"></i>Вход / Регистрация</a>
+                        <a href="~/Account/Login" class="mob-user"><i class="fa fa-user"></i>Вход / Регистрация</a>
                     }
                 </li>
                 <li><a href="#!" class="mob-city"><i class="fa fa-map-marker-alt"></i>Алматы<i class="fa fa-angle-right"></i></a></li>
@@ -48,7 +58,12 @@
                     <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
                 </div>
             </div>
-            <div class="region">
+            <div class="mob-user-cart boost-menu">
+                <h3><i class="fa fa-angle-left"></i>Моя корзина</h3>
+                <div id="mob-user-tovar" class="user-tovar"></div>
+                <button>Оплатить</button>
+            </div>
+            <div class="region boost-menu">
                 <h3><i class="fa fa-angle-left"></i>Выберите город</h3>
                 <p>A</p>
                 <ul>
@@ -124,24 +139,31 @@
 
                 @if (User.Identity.IsAuthenticated)
                 {
-                <div class="right right-user">
-                    <div class="city">@User.Identity.Name</div>
-                    <a href="#!" class="user"><i class="fa fa-user"></i></a>
-                    <div class="user-menu">
-                        <i class="fa fa-caret-up"></i>
-                        <p><span>Мой мобильный</span><br>+7(708) 116-27-75</p>
-                        <a href=""><i class="fa fa-cog"></i>Сменить пароль</a>
-                        <a href=""><i class="fa fa-bars"></i>Мои товары</a>
-                        <a href="~/Account/Logout"><i class="fa fa-sign-out-alt"></i>Выход</a>
+                    <div class="right right-user">
+                        <div class="city">@User.Identity.Name</div>
+                        <a href="#!" class="user"><i class="fa fa-user"></i></a>
+                        <div class="user-menu">
+                            <i class="fa fa-caret-up"></i>
+                            @*<p><span>Мой мобильный</span><br>+7(708) 116-27-75</p>*@
+                            <a href="~/Account/Parol"><i class="fa fa-cog"></i>Сменить пароль</a>
+                            <a href="#!" class="cart-show"><i class="fa fa-bars"></i>Корзина</a>
+                            <a href="~/Account/Logout"><i class="fa fa-sign-out-alt"></i>Выход</a>
+                        </div>
                     </div>
-                </div>
+                    <div class="modal-window user-modal">
+                        <div class="section">
+                            <div class="close"><span></span></div>
+                            <h1>Моя корзина</h1>
+                            <div class="user-tovar"></div>
+                        </div>
+                    </div>
                 }
                 else
                 {
-                <div class="right">
-                    <div class="city"><i class="fa fa-map-marker-alt"></i>Алматы</div>
-                    <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
-                </div>
+                    <div class="right">
+                        <div class="city"><i class="fa fa-map-marker-alt"></i>Алматы</div>
+                        <a href="~/Account/Login" class="user"><i class="fa fa-user"></i></a>
+                    </div>
                 }
 
             </header>
@@ -179,15 +201,49 @@
         </div>
     </div>
     @if(User.Identity.IsAuthenticated){
-    <script>
+<script>
         $('.mob-city').on('click', function (e) {
             e.preventDefault();
             $('.mob-menu').toggleClass('act-mob-menu');
             $('.main').toggleClass('act-main');
             $('body').toggleClass('act-body');
-            $('.region').toggleClass('act-region');
+            $('.region').toggleClass('act-boost-menu');
         });
-    </script>
+        $('.mob-cart-show').on('click', function (e) {
+            e.preventDefault();
+            $('.mob-menu').toggleClass('act-mob-menu');
+            $('.main').toggleClass('act-main');
+            $('body').toggleClass('act-body');
+            $('.mob-user-cart').toggleClass('act-boost-menu');
+        });
+        $('.cart-show').on('click', function (e) {
+            e.preventDefault();
+            $('.user-modal').css('display', 'flex');
+        });
+        $('.close').on('click', function (e) {
+            e.preventDefault();
+            $('.user-modal').css('display', 'none');
+        });
+
+        $.getJSON('/Store/CartGet', null, function (data) {
+            for (var i = 0; i < localStorage.length; i++) {
+                for (var d in data) {
+                    if (data[d].id == localStorage.key(i)) {
+                        $('.user-tovar').append('<div class="tovar">' +
+                            '<a href="http://www.sqexpress.kz/Store/Details/' + data[d].id + '" class="tov-img">' +
+                            '<img src="http://www.sqexpress.kz/PublicImages/' + data[d].publicImage + '">' +
+                            '</a>' +
+                            '<a href="http://www.sqexpress.kz/Store/Details/' + data[d].id + '" class="tovar-name">' + data[d].name + '</a>' +
+                            '<div class="price">' +
+                            '<p>Цена<br /><span>' + data[d].price + 'тг</span></p>' +
+                            '<p>Мин.Заказ<br /><span>' + data[d].minPay + '</span></p>' +
+                            '</div>' +
+                            '</div>')
+                    }
+                }
+            }
+        })
+</script>
     }
     <script type="text/javascript">
         $(document).ready(function () {
@@ -208,6 +264,11 @@
                 $('ul.usl-menu').slideToggle(300);
             });
 
+            $('a.mob-user-aut').click(function (e) {
+                e.preventDefault();
+                $('ul.mob-user-aut-menu').slideToggle(300);
+                $(this).children('i').toggleClass('act-mob-down-menu');
+            });
             $('a.mob-dost').click(function (e) {
                 e.preventDefault();
                 $('ul.mob-dost-menu').slideToggle(300);
@@ -226,9 +287,9 @@
                 $('body').toggleClass('act-body');
             });
 
-            $('.region > h3 > i').on('click', function (e) {
+            $('.boost-menu > h3 > i').on('click', function (e) {
                 e.preventDefault();
-                $('.region').toggleClass('act-region');
+                $(this).parent().parent().toggleClass('act-boost-menu');
             });
             //<i class="fa fa-check"></i>
 
@@ -243,10 +304,8 @@
             $('.region > button').on('click', function (e) {
                 e.preventDefault();
                 var s = $('.region > ul > li a').children('i.act-check').parent();
-
                 $('.mob-city').html('<i class="fa fa-map-marker-alt"></i>' + s.text() + '<i class="fa fa-angle-right"></i>');
-
-                $('.region').toggleClass('act-region');
+                $('.region').toggleClass('act-boost-menu');
             });
 
         })

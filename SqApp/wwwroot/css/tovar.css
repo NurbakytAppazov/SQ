@@ -776,7 +776,9 @@ a.tovar-name:hover {
         border-right: none;
         border-bottom: 1px solid #CBD6E8;
     }
-
+    .mySlides{
+        height: 320px;
+    }
     .tab-b > h2 {
         font-size: 16px;
         font-weight: bold;
@@ -814,6 +816,9 @@ a.tovar-name:hover {
 }
 
 @media (max-width: 375px) {
+    .mySlides {
+        height: 280px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -822,7 +827,7 @@ a.tovar-name:hover {
     }
     .mySlides {
         width: 85%;
-        height: 250px;
+        height: 270px;
     }
 
     .column {

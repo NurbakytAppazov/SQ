@@ -40,12 +40,12 @@
 
                 <div class="row">
                     <div class="column">
-                        <img class="demo cursor" src="~/PublicImages/@Model.Products.PublicImage" alt="The Woods">
+                        <img class="demo cursor" src="~/PublicImages/@Model.Products.PublicImage">
                     </div>
                     @foreach (var i in Model.ProductImages)
                     {
                         <div class="column">
-                            <img class="demo cursor" src="~/ProductImages/@i.Url" alt="The Woods">
+                            <img class="demo cursor" src="~/ProductImages/@i.Url">
                         </div>
                     }
                 </div>
@@ -53,7 +53,14 @@
             <div class="tov-text">
                 <h2>@Model.Products.Name</h2>
                 <p class="price">Цена <span>@Model.Products.Price тг</span></p>
-                <a href="~/Account/Login" class="buy">Купить</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a href="#!" class="buy toCart" data-id="@Model.Products.Id">В корзину</a>
+                }
+                else
+                {
+                    <a href="~/Account/Login" class="buy">Купить</a>
+                }
                 <ul>
                     <li>Одобрение онлайн</li>
                     <li>Высокий уровень одобрения</li>
@@ -179,6 +186,28 @@
 <script src="~/js/slider.min.js"></script>
 <script type="text/javascript" src="~/slick/slick.min.js"></script>
 <script type="text/javascript">
+
+    var cart = {};
+
+    $(document).ready(function () {
+        $('a.toCart').click(function (e) {
+            e.preventDefault();
+            
+            var tovId = $(this).attr('data-id');
+            var cartParse = JSON.parse(localStorage.getItem(tovId));
+            if (cartParse != null) {
+                if (cartParse[0] == tovId) {
+                    alert("Этот товар уже добавлен в Корзину !!!");
+                }
+            }
+            else {
+                cart[0] = tovId;
+                localStorage.setItem(tovId, JSON.stringify(cart));
+                alert("Добавлен в Корзину !!!");
+            }
+        })
+    });
+
 
     $(document).ready(function () {
         $('.column').on('click', function currentSlide() {

@@ -19,7 +19,17 @@ namespace SqApp.Controllers
             this.db = _db;
         }
 
-        
+        [Authorize]
+        public ActionResult Cart()
+        {
+            return View();
+        }
+        //[HttpPost]
+        public ActionResult CartGet()
+        {
+                return Json(db.Products);
+        }
+
         public async Task<IActionResult> Shop()
         {
             ShopViewModel svm = new ShopViewModel

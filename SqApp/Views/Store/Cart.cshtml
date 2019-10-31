@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SqApp.DbData.Product>
+<link rel="stylesheet" href="~/css/shop-menu.css">
+
+<content>
+    <h1>Моя Корзина</h1>
+    <div class="sect-cont" id="sect-cont">
+
+       @* <div class="tovars">
+            @foreach (var t in Model.Products)
+            {
+                <div class="tovar">
+                    <a href="~/Store/Details/@t.Id" class="tov-img">
+                        <img src="~/PublicImages/@t.PublicImage" alt="">
+                    </a>
+                    <a href="~/Store/Details/@t.Id" class="tovar-name">@t.Name</a>
+                    <div class="price">
+                        <p>Цена<br /><span>@t.Price тг</span></p>
+                        <p>Мин.Заказ<br /><span>@t.MinPay</span></p>
+                    </div>
+                </div>
+            }
+        </div>*@
+    </div>
+</content>
+
+    @*@foreach (var t in ViewBag.Prods)
+    {
+        <div class="tovar">
+            <a href="~/Store/Details/@t.Id" class="tov-img">
+                <img src="~/PublicImages/@t.PublicImage" alt="">
+            </a>
+            <a href="~/Store/Details/@t.Id" class="tovar-name">@t.Name</a>
+            <div class="price">
+                <p>Цена<br /><span>@t.Price тг</span></p>
+                <p>Мин.Заказ<br /><span>@t.MinPay</span></p>
+            </div>
+        </div>
+    }*@
+<script type="text/javascript">
+    //$(document).ready(function () {
+    //    $.getJSON('/Store/CartGet', null, function (data) {
+    //        for (var i = 0; i < localStorage.length; i++) {
+    //            for (var d in data) {
+    //                if (data[d].id == localStorage.key(i)) {
+    //                    $('#sect-cont').append('<div class="tovar">' +
+    //                        '<a href="http://www.sqexpress.kz/Store/Details/' + data[d].id + '" class="tov-img">' +
+    //                        '<img src="http://www.sqexpress.kz/PublicImages/' + data[d].publicImage + '">' +
+    //                        '</a>' +
+    //                        '<a href="http://www.sqexpress.kz/Store/Details/' + data[d].id + '" class="tovar-name">' + data[d].name + '</a>' +
+    //                        '<div class="price">' +
+    //                        '<p>Цена<br /><span>' + data[d].price + 'тг</span></p>' +
+    //                        '<p>Мин.Заказ<br /><span>' + data[d].minPay + '</span></p>' +
+    //                        '</div>' +
+    //                        '</div>')
+    //                }
+    //            }
+    //        }
+    //    })
+    //})
+</script>
