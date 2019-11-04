@@ -36,7 +36,7 @@
                         </ul>
                         <style>
                             .mob-menu > ul:last-child {
-                                height: 67vh !important;
+                                height: 57vh !important;
                             }
                         </style>
                     }
@@ -200,51 +200,70 @@
             </footer>
         </div>
     </div>
-    @if(User.Identity.IsAuthenticated){
-<script>
-        $('.mob-city').on('click', function (e) {
-            e.preventDefault();
-            $('.mob-menu').toggleClass('act-mob-menu');
-            $('.main').toggleClass('act-main');
-            $('body').toggleClass('act-body');
-            $('.region').toggleClass('act-boost-menu');
-        });
-        $('.mob-cart-show').on('click', function (e) {
-            e.preventDefault();
-            $('.mob-menu').toggleClass('act-mob-menu');
-            $('.main').toggleClass('act-main');
-            $('body').toggleClass('act-body');
-            $('.mob-user-cart').toggleClass('act-boost-menu');
-        });
-        $('.cart-show').on('click', function (e) {
-            e.preventDefault();
-            $('.user-modal').css('display', 'flex');
-        });
-        $('.close').on('click', function (e) {
-            e.preventDefault();
-            $('.user-modal').css('display', 'none');
-        });
-
-        $.getJSON('/Store/CartGet', null, function (data) {
-            for (var i = 0; i < localStorage.length; i++) {
-                for (var d in data) {
-                    if (data[d].id == localStorage.key(i)) {
-                        $('.user-tovar').append('<div class="tovar">' +
-                            '<a href="http://www.sqexpress.kz/Store/Details/' + data[d].id + '" class="tov-img">' +
-                            '<img src="http://www.sqexpress.kz/PublicImages/' + data[d].publicImage + '">' +
-                            '</a>' +
-                            '<a href="http://www.sqexpress.kz/Store/Details/' + data[d].id + '" class="tovar-name">' + data[d].name + '</a>' +
-                            '<div class="price">' +
-                            '<p>Цена<br /><span>' + data[d].price + 'тг</span></p>' +
-                            '<p>Мин.Заказ<br /><span>' + data[d].minPay + '</span></p>' +
-                            '</div>' +
-                            '</div>')
+@if(User.Identity.IsAuthenticated){
+    <script>
+         $('.mob-city').on('click', function (e) {
+             e.preventDefault();
+             $('.mob-menu').toggleClass('act-mob-menu');
+             $('.main').toggleClass('act-main');
+             $('body').toggleClass('act-body');
+             $('.region').toggleClass('act-boost-menu');
+         });
+         $('.mob-cart-show').on('click', function (e) {
+             e.preventDefault();
+             $('.mob-menu').toggleClass('act-mob-menu');
+             $('.main').toggleClass('act-main');
+             $('body').toggleClass('act-body');
+             $('.mob-user-cart').toggleClass('act-boost-menu');
+         });
+         $('.cart-show').on('click', function (e) {
+             e.preventDefault();
+             $('.user-modal').css('display', 'flex');
+         });
+         $('.close').on('click', function (e) {
+             e.preventDefault();
+             $('.user-modal').css('display', 'none');
+         });
+         $(document).ready(function () {
+            $.getJSON('/Store/CartGet', null, function (data) {
+                for (var i = 0; i < localStorage.length; i++) {
+                    for (var d in data) {
+                        if (data[d].id == localStorage.key(i)) {
+                            $('.user-tovar').append('<div class="tovar">' +
+                                '<a href="http://www.sqexpress.kz/Store/Details/' + data[d].id + '" class="tov-img">' +
+                                '<img src="http://www.sqexpress.kz/PublicImages/' + data[d].publicImage + '">' +
+                                '</a>' +
+                                '<a href="http://www.sqexpress.kz/Store/Details/' + data[d].id + '" class="tovar-name">' + data[d].name + ' lipsum jasd vjsdJ sadjv sdjs adb</a>' +
+                                '<div class="price">' +
+                                '<p>Цена<br /><span>' + data[d].price + 'тг</span></p>' +
+                                '<p>Мин.Заказ<br /><span>' + data[d].minPay + ' шт</span></p>' +
+                                '</div>' +
+                                '<div class="user-tov-btns">' +
+                                '<a href="#!" class="buy">Купить</a>' +
+                                '<a href="#!" id="cansel" data-id="' + data[d].id + '">Отменить</a>' +
+                                '</div>' +
+                                '</div>')
+                        }
                     }
                 }
-            }
-        })
-</script>
-    }
+                $('a#cansel').on('click', function (e) {
+                    e.preventDefault();
+                    var tovId = $(this).attr('data-id');
+
+                    for (var i = 0; i < localStorage.length; i++) {
+                        if (tovId == localStorage.key(i)) {
+                            localStorage.removeItem(localStorage.key(i));
+                            $(this).parent().parent().css('display', 'none');
+                            alert("Товар удален из корзины!!!");
+                        }
+                    }
+                })
+            })
+
+            
+         })
+    </script>
+}
     <script type="text/javascript">
         $(document).ready(function () {
             $('.right-user').hover(function () {

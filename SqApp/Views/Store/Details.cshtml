@@ -56,6 +56,7 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a href="#!" class="buy toCart" data-id="@Model.Products.Id">В корзину</a>
+                    <a href="~/Account/Login" class="buy">Купить</a>
                 }
                 else
                 {
@@ -203,9 +204,17 @@
             else {
                 cart[0] = tovId;
                 localStorage.setItem(tovId, JSON.stringify(cart));
-                alert("Добавлен в Корзину !!!");
+                $(this).html('Добавлен в Корзину');
             }
         })
+
+        var btnId = $('a.toCart').attr('data-id');
+        for (var i = 0; i < localStorage.length; i++) {
+            if (btnId == localStorage.key(i)) {
+                $('a.toCart').html('Добавлен в Корзину');
+            }
+        }
+
     });
 
 

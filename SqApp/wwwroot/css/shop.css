@@ -154,7 +154,7 @@ i.fa-search {
 }
 
 .tovars { /*---------------TOVARS-------------*/
-    width: 70%;
+    width: 85%;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -258,7 +258,7 @@ a.tovar-name:focus, a.tov-img:focus {
     }
 
     .tovars {
-        width: 80%;
+        width: 90%;
     }
 }
 

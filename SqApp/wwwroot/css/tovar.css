@@ -296,7 +296,8 @@ i.fa-search {
         text-decoration: none;
         text-align: center;
         padding: 10px;
-        margin: 15px 0;
+        margin: 0;
+        margin-top: 15px;
         border-radius: 25px;
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
@@ -609,7 +610,7 @@ a.tovar-name:hover {
         width: 90%;
     }
     .mySlides{
-        height: 320px;
+        height: 360px;
     }
     .column {
         height: 70px;
@@ -691,7 +692,7 @@ a.tovar-name:hover {
 
     .mySlides {
         width: 80%;
-        height: 270px;
+        height: 320px;
     }
 
     .column {
