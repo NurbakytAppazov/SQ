@@ -107,6 +107,38 @@
                 <span class="score-text">Года<br>в Казахстане</span>
             </div>
         </div>
+        <div class="score-slider">
+            <div class="slItems scores">
+                <div class="slItem score">
+                    <p>224 </p>
+                    <span class="score-text">Страны</span>
+                </div>
+                <div class="slItem score">
+                    <p>17 950 </p>
+                    <span class="score-text">Населенных пунктов<br>в Казахстане и СНГ</span>
+                </div>
+                <div class="slItem score">
+                    <p>20 </p>
+                    <span class="score-text">Офисов<br>в городах<br>Казахстана</span>
+                </div>
+                <div class="slItem score">
+                    <p>250 </p>
+                    <span class="score-text">Сотрудников</span>
+                </div>
+                <div class="slItem score">
+                    <p>90 </p>
+                    <span class="score-text">Автомобилей</span>
+                </div>
+                <div class="slItem score">
+                    <p>1 500 </p>
+                    <span class="score-text">Авиарейсов<br>в месяц</span>
+                </div>
+                <div class="slItem score">
+                    <p>22 </p>
+                    <span class="score-text">Года<br>в Казахстане</span>
+                </div>
+            </div>
+        </div>
         <div class="sect3-bottom">
             <div class="sect3-bg"></div>
             <div class="lists">
@@ -127,7 +159,7 @@
         <div class="sect4-items">
             <div>
                 <p>Рассчитайте стоимость</p>
-                <a href="#!" class="more">КАЛЬКУЛЯТОР</a>
+                <a href="#!" class="more calc-block">КАЛЬКУЛЯТОР</a>
             </div>
             <div>
                 <p>Вызовите курьера</p>
@@ -139,6 +171,26 @@
             </div>
         </div>
     </div>
+    <form class="calc-form">
+        <label>
+            ОТКУДА<br>
+            <select id="from">
+                <option>Алматы</option>
+                <option>Астана</option>
+            </select>
+        </label>
+        <label>
+            КУДА<br>
+            <select id="to">
+                <option>Астана</option>
+                <option>Алматы</option>
+            </select>
+        </label>
+        <label>Вес(кг)<br><input id="m" type="number" min="0" required></label>
+        <label>Объем(см<span style="font-weight: bold; font-size: 12px;vertical-align: top">3</span>)<br><input id="v" type="number" min="0" required></label>
+        <button type="button">Рассчитать</button>
+        <p></p>
+    </form>
     <div class="sect5">
         <div class="sect5-head">
             <div class="news">Новости</div>
@@ -168,13 +220,58 @@
 <script src="~/js/slider.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        
+        $('.calc-block').click(function (e) {
+            e.preventDefault();
+            $('.calc-form').addClass('calc-form-act');
+        });
+        $('.calc-form > button').click(function () {
+            var from = $('#from').val();
+            var to = $('#to').val();
+            var m = $('#m').val();
+            var v = $('#v').val();
+            var sum = 100;
+
+            if (from == 'Алматы') {
+                switch (to) {
+                    case from:
+                        $('.calc-form > p').css('display', 'block').html('Города не могут быть одинаковыми!!!');
+                        $('.calc-form > p').css('color', 'red');
+                        break;
+
+                    case 'Астана':
+                        sum = sum * m * v;
+                        $('.calc-form > p').css('display', 'block').html('Итого: ' + sum + ' тенге');
+                        $('.calc-form > p').css('color', '#168346');
+                        break;
+                }
+            }
+            if (from == 'Астана') {
+                switch (to) {
+                    case from:
+                        $('.calc-form > p').css('display', 'block').html('Города не могут быть одинаковыми!!!');
+                        $('.calc-form > p').css('color', 'red');
+                        break;
+
+                    case 'Алматы':
+                        sum = sum * m * v + 50;
+                        $('.calc-form > p').css('display', 'block').html('Итого: ' + sum + ' тенге');
+                        $('.calc-form > p').css('color', '#168346');
+                        break;
+                }
+            }
+        });
          $(function () {
              $('.slider').rbtSlider({
                  'height': '100%',
                  'dots': true,
                  'arrows': true,
                  'auto': 3
+             })
+             $('.score-slider').rbtSlider({
+                 'height': '100%',
+                 'dots': false,
+                 'arrows': false,
+                 'auto': 7
              })
          });
      });
